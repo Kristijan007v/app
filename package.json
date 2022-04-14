@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
+    "daisyui": "^2.13.6",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",

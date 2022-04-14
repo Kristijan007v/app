@@ -16,10 +16,6 @@ export default function Skeleton({ children }) {
         <main className="m-6">{children}</main>
       </ErrorBoundary>
 
-      <ErrorBoundary moduleName={"ContactForm"}>
-        <ContactForm />
-      </ErrorBoundary>
-
       {/* Footer */}
       <ErrorBoundary moduleName={"Footer"}>
         <Footer />

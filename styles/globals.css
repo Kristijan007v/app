@@ -22,7 +22,7 @@ body {
 /* Custom styles */
 
 /* Buttom */
-.btn {
+.btn__default {
   @apply rounded bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 /* Links */
-.link {
+.link__default {
   @apply text-lg font-semibold text-grayP hover:text-blue-600 hover:underline hover:underline-offset-8;
 }
 

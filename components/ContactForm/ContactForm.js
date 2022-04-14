@@ -1,12 +1,13 @@
 import React from "react";
+import ButtonDefault from "../Buttons/ButtonDefault";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function ContactForm() {
   return (
     <div className="container flex flex-col space-y-6">
       <SectionHeading
-        number="01"
-        title="Contact Form"
+        number="03"
+        title="Get in Touch"
         desciption={"Feel free to contact me and ask me anything you want. 😊"}
       />
       <form className="flex flex-col space-y-4">
@@ -17,6 +18,7 @@ export default function ContactForm() {
         <label className="label__default">Message:</label>
         <textarea className="textarea__default" rows={"10"} />
       </form>
+      <ButtonDefault text={"Say hello!"} />
     </div>
   );
 }
