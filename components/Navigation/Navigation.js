@@ -16,7 +16,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="sticky top-0 z-10 flex items-center justify-between bg-blue-100/60 p-6 text-gray-100 backdrop-blur-xl dark:bg-gray-800/60">
+      <nav className="sticky top-0 z-10 flex items-center justify-between bg-blue-100/60 p-4 text-gray-100 backdrop-blur-xl dark:bg-gray-800/60 md:p-6">
         <Link href={"/"}>
           <a className="logo text-2xl font-bold text-blue-700">KV</a>
         </Link>
