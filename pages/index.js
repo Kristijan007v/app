@@ -7,12 +7,15 @@ import About from "../components/Sections/About/About";
 import Projects from "../components/Sections/Projects/Projects";
 import ContactForm from "../components/ContactForm/ContactForm";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
+import HeroHeader from "../components/Sections/HeroHeader/HeroHeader";
 
 export default function Home() {
   return (
     <>
       <Skeleton>
         <div className="container flex flex-col space-y-8">
+          {/* HERO HEADER */}
+          <HeroHeader />
           {/* 01. ABOUT */}
           <ErrorBoundary moduleName={"About"}>
             <About />

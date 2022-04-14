@@ -10,14 +10,14 @@ export default function About() {
         desciption={"Here are some of the websites I made for my clients."}
         align={"left"}
       />
-      <div class="mockup-code bg-secondaryGray">
+      <div className="mockup-code bg-secondaryGray">
         <pre data-prefix="$">
           <code>print(date-of-birth)</code>
         </pre>
-        <pre data-prefix=">" class="text-warning">
+        <pre data-prefix=">" className="text-warning">
           <code>07.03.2000.</code>
         </pre>
-        <pre data-prefix=">" class="text-success">
+        <pre data-prefix=">" className="text-success">
           <code>Done!</code>
         </pre>
         <pre data-prefix="$">

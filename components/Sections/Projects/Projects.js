@@ -6,12 +6,14 @@ import Card from "../../Card/Card";
 export default function Projects() {
   const project = [
     {
+      id: 1,
       name: "SS Portal",
       desc: "A web application for students to manage their personal information.",
       programmingLanguages: "React, Redux, Node.js, Express, MongoDB",
       link: "https://ss-portal.xyz",
     },
     {
+      id: 2,
       name: "KV Blog",
       desc: "A web application for students to manage their personal information.",
       link: "https://ss-portal.xyz",
@@ -30,8 +32,9 @@ export default function Projects() {
       </div>
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {project &&
-          project.map(({ name, desc, programmingLanguages }) => (
+          project.map(({ id, name, desc, programmingLanguages }) => (
             <Card
+              key={id}
               title={name}
               desc={desc}
               programmingLanguages={programmingLanguages}

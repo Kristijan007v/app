@@ -11,14 +11,14 @@ export default function MobileMenu({ closeMenu }) {
         <ul className=" flex flex-col space-y-6">
           <li>
             <Link href={"/"}>
-              <a className="link">
+              <a className="link__default">
                 <span className="special">01.</span> About
               </a>
             </Link>
           </li>
           <li>
             <Link href={"/"}>
-              <a className="link">
+              <a className="link__default">
                 {" "}
                 <span className="special">02.</span> Portifolio
               </a>
@@ -26,7 +26,7 @@ export default function MobileMenu({ closeMenu }) {
           </li>
           <li>
             <Link href={"/"}>
-              <a className="link">
+              <a className="link__default">
                 {" "}
                 <span className="special">03.</span> Contact me
               </a>
@@ -34,7 +34,7 @@ export default function MobileMenu({ closeMenu }) {
           </li>
           <li>
             <Link href={"/documents/resume.pdf"}>
-              <a className="btn">My Resume</a>
+              <a className="btn__default">My Resume</a>
             </Link>
           </li>
         </ul>
