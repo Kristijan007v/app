@@ -1,3 +1,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font Roboto Mono IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Mono&display=swap");
+
+/* Global styles */
+html,
+body {
+  @apply scroll-smooth font-monospace;
+}
+
+body {
+  @apply bg-primaryGray;
+}
+
+.container {
+  @apply m-auto w-full p-6;
+}
+
+/* Custom styles */
+
+/* Buttom */
+.btn {
+  @apply rounded bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700;
+}
+
+/* Headings */
+.heading__default {
+  @apply text-3xl font-semibold text-gray-300;
+}
+
+.heading__default__2 {
+  @apply text-3xl font-semibold text-gray-300;
+}
+
+.heading__default_3 {
+  @apply text-2xl font-semibold text-gray-300;
+}
+
+/* Paragraph */
+.p__default {
+  @apply text-lg font-medium text-graySpecial;
+}
+
+/* Links */
+.link {
+  @apply text-lg font-semibold text-grayP hover:text-blue-600 hover:underline hover:underline-offset-8;
+}
+
+.link__special {
+  @apply text-lg font-semibold text-blue-600 hover:underline hover:underline-offset-8;
+}
+
+/* FORM STYLES */
+
+/* Labels */
+.label__default {
+  @apply text-lg font-semibold text-grayP;
+}
+
+/* Inputs */
+.input__default {
+  @apply border-b-2 border-blue-600 bg-transparent p-4 text-white hover:border-b-4 focus:border-blue-700 focus:outline-none;
+}
+
+/* Textarea */
+.textarea__default {
+  @apply resize-none border-b-2 border-blue-600 bg-transparent p-4 text-white hover:border-b-4;
+}
+
+/* Icons */
+.icon__social {
+  @apply text-5xl font-semibold text-gray-600 hover:cursor-pointer hover:text-blue-600 dark:text-graySpecial;
+}
+
+.icon__special {
+  @apply text-4xl font-semibold text-blue-700 hover:cursor-pointer hover:text-blue-600;
+}
+
+.icon__basic {
+  @apply text-2xl font-semibold text-gray-600 hover:cursor-pointer hover:text-blue-600 dark:text-graySpecial;
+}
+
+/* Special styles */
+.special {
+  @apply text-blue-700;
+}
+
+.p__special {
+  @apply text-lg font-semibold text-blue-700;
+}
+
+/* Overlay */
+.overlay {
+  @apply fixed top-0 bottom-0 right-0 left-0 z-30 backdrop-blur-xl dark:bg-gray-800/60;
+}
+
+/* Animations */
+.hover__translate {
+  @apply transform cursor-pointer transition duration-500 hover:-translate-y-4;
+}
