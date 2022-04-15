@@ -15,19 +15,19 @@ export default function MobileMenu({ closeMenu }) {
       <div className="mx-6 flex flex-col items-center justify-center space-y-6">
         <ul className=" flex flex-col space-y-2 text-center">
           <li className="flex flex-col space-y-2">
-            <span className="special link__mobile">01.</span>
+            <span className="special text-2xl font-bold">01.</span>
             <Link href={"/#about"}>
               <a className="link__mobile">About</a>
             </Link>
           </li>
           <li className="flex flex-col space-y-2">
-            <span className="special link__mobile">02.</span>
+            <span className="special text-2xl font-bold">02.</span>
             <Link href={"/#portifolio"}>
               <a className="link__mobile"> Portifolio</a>
             </Link>
           </li>
           <li className="flex flex-col space-y-2">
-            <span className="special link__mobile">03.</span>
+            <span className="special text-2xl font-bold">03.</span>
             <Link href={"/#contact-me"}>
               <a className="link__mobile"> Contact me</a>
             </Link>

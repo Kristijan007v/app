@@ -30,6 +30,7 @@ module.exports = {
         lightHeadingSecondary: "#4b5563",
       },
       fontSize: {
+        "8xl": "8rem",
         "9xl": "10rem",
       },
     },

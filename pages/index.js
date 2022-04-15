@@ -17,15 +17,17 @@ export default function Home() {
           {/* HERO HEADER */}
           <HeroHeader />
           {/* 01. ABOUT */}
-          <div id="about" className="scroll scroll-p-8"></div>
+          <div id="about" className="p-6"></div>
           <ErrorBoundary moduleName={"About"}>
             <About />
           </ErrorBoundary>
           {/* 02. MY PROJECTS */}
+          <div id="portifolio" className="p-6"></div>
           <ErrorBoundary moduleName={"Projects"}>
             <Projects />
           </ErrorBoundary>
           {/* 03. CONTACT ME */}
+          <div id="contact-me" className="p-6"></div>
           <ErrorBoundary moduleName={"ContactForm"}>
             <ContactForm />
           </ErrorBoundary>
