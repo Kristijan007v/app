@@ -67,7 +67,11 @@ export default function About() {
           <code>Done!</code>
         </pre>
       </div>
-      <ButtonDefault text={"Download My Resume"} onclick={downloadFile} />
+      <ButtonDefault
+        text={"Download My Resume"}
+        onclick={downloadFile}
+        ariaLabel={"Download my resume"}
+      />
     </div>
   );
 }

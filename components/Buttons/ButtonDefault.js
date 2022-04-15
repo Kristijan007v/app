@@ -7,6 +7,7 @@ export default function ButtonDefault({
   link,
   href,
   linkIcon,
+  ariaLabel,
 }) {
   const visitLink = () => {
     window.location.href = `${href}`;
@@ -15,7 +16,11 @@ export default function ButtonDefault({
   return (
     <>
       {link ? (
-        <button className={`btn__default ${style}`} onClick={visitLink}>
+        <button
+          className={`btn__default ${style}`}
+          onClick={visitLink}
+          aria-label={ariaLabel}
+        >
           {text}
         </button>
       ) : linkIcon ? (
