@@ -7,7 +7,7 @@ import Textbox from "../Textbox/Textbox";
 export default function MobileMenu({ closeMenu }) {
   return (
     <Backdrop onclick={closeMenu} buttonBottom animationType={"top"}>
-      <div className="mt-6 flex flex-col items-center justify-center space-y-6">
+      <div className="mx-6 flex flex-col items-center justify-center space-y-6">
         <ul className=" flex flex-col space-y-8 text-center">
           <li className="flex flex-col space-y-2">
             <span className="special link__mobile">01.</span>
