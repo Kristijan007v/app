@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import validator from "validator";
@@ -22,10 +22,6 @@ export default function ContactForm() {
     toast(message, toastStyle[0]);
   };
 
-  const handleSubmit = (e) => {
-    notification("💌 Message sent succesfully!");
-  };
-
   const validateEmail = (e) => {
     var email = e.target.value;
 
@@ -44,9 +40,15 @@ export default function ContactForm() {
         title="Get in Touch"
         desciption={"Feel free to contact me and ask me anything you want. 😊"}
       />
-      <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
+      <form className="flex flex-col space-y-4">
         <label className="label__default">Name:</label>
-        <input required className="input__default" type={"text"} />
+        <input
+          required
+          className="input__default"
+          name={"fullname"}
+          id="fullname"
+          type={"text"}
+        />
         <label className="label__default">Email address:</label>
         <input
           required
@@ -57,7 +59,13 @@ export default function ContactForm() {
           onChange={validateEmail}
         />
         <label className="label__default">Message:</label>
-        <textarea required className="textarea__default" rows={"10"} />
+        <textarea
+          name={"message"}
+          id="message"
+          required
+          className="textarea__default"
+          rows={"10"}
+        />
       </form>
       <ButtonDefault
         text={"Say hello!"}

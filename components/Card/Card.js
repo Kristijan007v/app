@@ -4,6 +4,7 @@ import LinkIcon from "../Icons/LinkIcon";
 import GithubIcon from "../Icons/GithubIcon";
 
 export default function Card({
+  year,
   title,
   desc,
   programmingLanguages,
@@ -20,7 +21,7 @@ export default function Card({
           {linkicon && <LinkIcon href={href} />}
         </div>
       </div>
-      <h3 className="heading__default_3">{title}</h3>
+      <h3 className="heading__special__3">{title}</h3>
       <p className="p__default">{desc}</p>
       <div className="flex space-x-2">
         {programmingLanguages ? (
@@ -31,6 +32,7 @@ export default function Card({
           </p>
         )}
       </div>
+      {/* <p className="special text-center font-medium">Year: {year}</p> */}
     </div>
   );
 }

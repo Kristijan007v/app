@@ -8,6 +8,7 @@ export default function Projects() {
   const project = [
     {
       id: 1,
+      year: "2020",
       name: "SS Portal",
       desc: "A web application for students to manage their personal information.",
       programmingLanguages: "React, Redux, Node.js, Express, MongoDB",
@@ -15,6 +16,7 @@ export default function Projects() {
     },
     {
       id: 2,
+      year: "2022",
       name: "KV Blog",
       desc: "A web application for students to manage their personal information.",
       href: "https://devclub.vercel.app/",
@@ -42,16 +44,19 @@ export default function Projects() {
       </div>
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {project &&
-          project.map(({ id, name, desc, programmingLanguages, href }) => (
-            <Card
-              key={id}
-              title={name}
-              desc={desc}
-              programmingLanguages={programmingLanguages}
-              href={`${href}`}
-              linkicon={true}
-            />
-          ))}
+          project.map(
+            ({ id, year, name, desc, programmingLanguages, href }) => (
+              <Card
+                key={id}
+                year={year}
+                title={name}
+                desc={desc}
+                programmingLanguages={programmingLanguages}
+                href={`${href}`}
+                linkicon={true}
+              />
+            )
+          )}
       </section>
     </div>
   );

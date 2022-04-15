@@ -12,7 +12,7 @@ export default function LinkIcon({ onclick, link, href }) {
       <button onClick={visitLink} aria-label={"Link to project"}>
         <IconContext.Provider
           value={{
-            className: "icon__basic",
+            className: "icon__link__special",
           }}
         >
           <FaExternalLinkAlt />
