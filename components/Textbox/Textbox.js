@@ -7,7 +7,9 @@ export default function Textbox({ title, text, type }) {
       <div className="flex flex-col space-y-2">
         <div className="flex items-center space-x-4">
           <InfoIcon />
-          <h4 className="heading__default_2 text-2xl font-semibold">{title}</h4>
+          <h4 className="heading__default__2 text-2xl font-semibold">
+            {title}
+          </h4>
         </div>
         <p className="p__default">{text}</p>
       </div>
