@@ -9,27 +9,22 @@ export default function MobileMenu({ closeMenu }) {
     <Backdrop onclick={closeMenu} buttonBottom animationType={"top"}>
       <div className="mt-6 flex flex-col items-center justify-center space-y-6">
         <ul className=" flex flex-col space-y-8 text-center">
-          <li>
+          <li className="flex flex-col space-y-2">
+            <span className="special link__mobile">01.</span>
             <Link href={"/#about"}>
-              <a className="link__mobile">
-                <span className="special">01.</span> About
-              </a>
+              <a className="link__mobile">About</a>
             </Link>
           </li>
-          <li>
+          <li className="flex flex-col space-y-2">
+            <span className="special link__mobile">02.</span>
             <Link href={"/#portifolio"}>
-              <a className="link__mobile">
-                {" "}
-                <span className="special">02.</span> Portifolio
-              </a>
+              <a className="link__mobile"> Portifolio</a>
             </Link>
           </li>
-          <li>
+          <li className="flex flex-col space-y-2">
+            <span className="special link__mobile">03.</span>
             <Link href={"/#contact-me"}>
-              <a className="link__mobile">
-                {" "}
-                <span className="special">03.</span> Contact me
-              </a>
+              <a className="link__mobile"> Contact me</a>
             </Link>
           </li>
         </ul>

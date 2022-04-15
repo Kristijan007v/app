@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="mb-6 p-4 text-center">
       <div className="flex items-center justify-center space-x-4 p-4">
         <GithubIcon link href={"https://github.com/kristijan007v"} />
-        <InstagramIcon link href={"https://instagram.com/kristijan007"} />
+        <InstagramIcon link href={"https://instagram.com/kristijan_007"} />
         <LinkedinIcon link href={"https://linkedin.com"} />
       </div>
       <p className="text-sm font-semibold text-gray-600 dark:text-graySpecial md:text-lg lg:text-xl">
