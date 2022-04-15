@@ -6,7 +6,7 @@ import LinkedinIcon from "../Icons/LinkedinIcon";
 
 export default function Footer() {
   return (
-    <footer className="mb-6 p-4 text-center">
+    <footer className="mb-2 p-4 text-center">
       <div className="flex items-center justify-center space-x-4 p-4">
         <GithubIcon link href={"https://github.com/kristijan007v"} />
         <InstagramIcon link href={"https://instagram.com/kristijan_007"} />

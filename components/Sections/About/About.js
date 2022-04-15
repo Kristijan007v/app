@@ -50,7 +50,7 @@ export default function About() {
           objectFit="cover"
         />
       </div>
-      <div>
+      <div className="flex flex-col space-y-6">
         <div className="mockup-code bg-secondaryGray">
           <pre data-prefix="$">
             <code>print(date-of-birth)</code>
