@@ -11,7 +11,7 @@ export default function Footer() {
         <InstagramIcon />
         <LinkedinIcon />
       </div>
-      <p className="text-md font-semibold text-gray-600 dark:text-graySpecial md:text-lg lg:text-xl">
+      <p className="text-base font-semibold text-gray-600 dark:text-graySpecial md:text-lg lg:text-xl">
         Designed and made by Kristijan Vidović
       </p>
     </footer>

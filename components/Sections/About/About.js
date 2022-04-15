@@ -8,13 +8,13 @@ export default function About() {
       <SectionHeading
         title="About"
         number={"01"}
-        desciption={"Here are some of the websites I made for my clients."}
+        desciption={"Let me introduce myself."}
         align={"left"}
       />
       <div className="relative h-72 w-full">
         <Image
           priority
-          className="rounded-md grayscale"
+          className="mask mask-squircle grayscale"
           alt={"Article Image"}
           src={"/images/my_photo.webp"}
           layout="fill"
