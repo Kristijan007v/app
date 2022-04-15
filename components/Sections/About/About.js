@@ -14,7 +14,7 @@ export default function About() {
       <div className="relative h-72 w-full">
         <Image
           priority
-          className="mask mask-squircle grayscale"
+          className="mask mask-squircle grayscale hover:grayscale-0"
           alt={"Article Image"}
           src={"/images/my_photo.webp"}
           layout="fill"
@@ -32,7 +32,13 @@ export default function About() {
           <code>Done!</code>
         </pre>
         <pre data-prefix="$">
-          <code>print(date-of-birth)</code>
+          <code>print(education)</code>
+        </pre>
+        <pre data-prefix=">" className="text-warning">
+          <code>Highscool: Gimnazija Sesvete (2015-2019)</code>
+        </pre>
+        <pre data-prefix=">" className="text-success">
+          <code>Done!</code>
         </pre>
       </div>
     </>

@@ -19,8 +19,8 @@ export default function HeroHeader() {
           got in love with Tailwind CSS and just loves to programm stuff. Python
           all the way. 😊
         </p>
-        <ButtonDefault text={"Check out my blog"} />
       </div>
+      <ButtonDefault text={"Check out my blog"} />
       <LinkDefault text={"Scroll down to find out more"} align={"center"} />
     </>
   );
