@@ -8,7 +8,7 @@ import SunIcon from "../Icons/SunIcon";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme("dark");
 
   const toogleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
