@@ -1,9 +1,32 @@
 import React from "react";
 
-export default function ButtonDefault({ text, style, onclick }) {
+export default function ButtonDefault({
+  text,
+  style,
+  onclick,
+  link,
+  href,
+  linkIcon,
+}) {
+  const visitLink = () => {
+    window.location.href = `${href}`;
+  };
+
   return (
-    <button className={`btn__default ${style}`} onClick={onclick}>
-      {text}
-    </button>
+    <>
+      {link ? (
+        <button className={`btn__default ${style}`} onClick={visitLink}>
+          {text}
+        </button>
+      ) : linkIcon ? (
+        <button className={`${style}`} onClick={onclick}>
+          {text}
+        </button>
+      ) : (
+        <button className={`btn__default ${style}`} onClick={onclick}>
+          {text}
+        </button>
+      )}
+    </>
   );
 }

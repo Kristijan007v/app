@@ -5,19 +5,25 @@ import validator from "validator";
 import toast from "react-hot-toast";
 
 export default function ContactForm() {
-  const notification = (message) => {
-    toast.success(message, {
-      icon: "💌",
+  const toastStyle = [
+    {
+      position: "bottom-center",
       style: {
         borderRadius: "10px",
-        background: "#333",
+        background: "rgb(21, 28, 38, 60%)",
+        backdropFilter: "blur(10px)",
         color: "#fff",
+        border: "1px solid rgb(29, 78, 216)",
       },
-    });
+    },
+  ];
+
+  const notification = (message) => {
+    toast(message, toastStyle[0]);
   };
 
   const handleSubmit = (e) => {
-    notification("Message sent succesfully!");
+    notification("💌 Message sent succesfully!");
   };
 
   const validateEmail = (e) => {
@@ -55,7 +61,7 @@ export default function ContactForm() {
       </form>
       <ButtonDefault
         text={"Say hello!"}
-        onclick={() => notification("Message sent succesfully!")}
+        onclick={() => notification("💌 Message sent succesfully!")}
       />
     </div>
   );

@@ -20,7 +20,11 @@ export default function HeroHeader() {
           all the way. 😊
         </p>
       </div>
-      <ButtonDefault text={"Check out my blog"} />
+      <ButtonDefault
+        text={"Check out my blog"}
+        link
+        href={"https://devclub.vercel.app"}
+      />
       <LinkDefault text={"Scroll down to find out more"} align={"center"} />
     </div>
   );

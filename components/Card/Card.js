@@ -1,13 +1,24 @@
 import React from "react";
 import FolderIcon from "../Icons/FolderIcon";
 import LinkIcon from "../Icons/LinkIcon";
+import GithubIcon from "../Icons/GithubIcon";
 
-export default function Card({ title, desc, programmingLanguages }) {
+export default function Card({
+  title,
+  desc,
+  programmingLanguages,
+  github,
+  linkicon,
+  href,
+}) {
   return (
     <div className="hover__translate flex flex-col space-y-4 rounded-md bg-secondaryGray p-6">
       <div className="flex items-center justify-between">
         <FolderIcon />
-        <LinkIcon />
+        <div className="flex items-center space-x-4">
+          {github && <GithubIcon />}
+          {linkicon && <LinkIcon href={href} />}
+        </div>
       </div>
       <h3 className="heading__default_3">{title}</h3>
       <p className="p__default">{desc}</p>

@@ -11,13 +11,13 @@ export default function Projects() {
       name: "SS Portal",
       desc: "A web application for students to manage their personal information.",
       programmingLanguages: "React, Redux, Node.js, Express, MongoDB",
-      link: "https://ss-portal.xyz",
+      href: "https://ss-portal.kristijan-projects.xyz/",
     },
     {
       id: 2,
       name: "KV Blog",
       desc: "A web application for students to manage their personal information.",
-      link: "https://ss-portal.xyz",
+      href: "https://devclub.vercel.app/",
     },
   ];
   return (
@@ -42,12 +42,14 @@ export default function Projects() {
       </div>
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {project &&
-          project.map(({ id, name, desc, programmingLanguages }) => (
+          project.map(({ id, name, desc, programmingLanguages, href }) => (
             <Card
               key={id}
               title={name}
               desc={desc}
               programmingLanguages={programmingLanguages}
+              href={`${href}`}
+              linkicon={true}
             />
           ))}
       </section>

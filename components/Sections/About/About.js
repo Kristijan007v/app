@@ -1,11 +1,34 @@
-import React from "react";
-import SectionHeading from "../../SectionHeading/SectionHeading";
 import Image from "next/image";
-import ButtonDefault from "../../Buttons/ButtonDefault";
-import Link from "next/link";
+import React from "react";
 import toast from "react-hot-toast";
+import ButtonDefault from "../../Buttons/ButtonDefault";
+import SectionHeading from "../../SectionHeading/SectionHeading";
 
 export default function About() {
+  const toastStyle = [
+    {
+      position: "bottom-center",
+      style: {
+        borderRadius: "10px",
+        background: "rgb(21, 28, 38, 60%)",
+        backdropFilter: "blur(10px)",
+        color: "#fff",
+        border: "1px solid rgb(29, 78, 216)",
+      },
+    },
+  ];
+
+  const downloadFile = () => {
+    toast("🤞 Please wait...", toastStyle[0]);
+    setTimeout(() => {
+      toast("😁 Testing your patience...", toastStyle[0]);
+      setTimeout(() => {
+        toast("❤️ Okay here you go, sorry!", toastStyle[0]);
+        window.location.href = "/documents/resume.pdf";
+      }, 4200);
+    }, 4000);
+  };
+
   return (
     <div id="about" className="flex flex-col space-y-6">
       <SectionHeading
@@ -44,9 +67,7 @@ export default function About() {
           <code>Done!</code>
         </pre>
       </div>
-      <Link href={"/documents/resume.pdf"}>
-        <a className="btn__default text-center">Download resume</a>
-      </Link>
+      <ButtonDefault text={"Download My Resume"} onclick={downloadFile} />
     </div>
   );
 }
