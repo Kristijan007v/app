@@ -13,7 +13,7 @@ export default function PortifolioCard() {
   }, []);
 
   return (
-    <div className="m-auto flex w-full flex-col -space-y-12 lg:w-4/5 lg:flex-row lg:items-center lg:-space-x-10">
+    <div className="m-auto flex w-full flex-col -space-y-14 lg:w-4/5 lg:flex-row lg:items-center lg:-space-x-14">
       <div className="relative h-96 w-full">
         {loaded ? (
           <Image
@@ -34,12 +34,14 @@ export default function PortifolioCard() {
         <p className="heading__default_3 hidden lg:block">
           BDF Logistics d.o.o
         </p>
-        <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray p-8 shadow-xl dark:bg-secondaryGray">
+        <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/60 p-8 shadow-xl backdrop-blur-xl dark:bg-secondaryGray/60">
           <p className="p__special block text-left lg:hidden">HTML CSS JS</p>
           <p className="heading__default_3 block lg:hidden">
             BDF Logistics d.o.o
           </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
           <ButtonDefault
             text={"Visit website"}
             link
