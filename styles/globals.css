@@ -81,7 +81,7 @@ body {
 
 /* Inputs */
 .input__default {
-  @apply border-b-2 border-blue-600 bg-transparent p-4 text-white hover:border-b-4 focus:border-blue-700 focus:outline-none;
+  @apply border-b-2 border-blue-600 bg-transparent p-4 text-black hover:border-b-4 focus:border-blue-700 focus:bg-lightSecondaryGray focus:outline-none dark:text-white focus:dark:bg-secondaryGray;
 }
 
 /* Textarea */

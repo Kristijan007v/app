@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion";
 import { React, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import InfoButton from "../Buttons/InfoButton";
@@ -25,28 +24,26 @@ export default function Skeleton({ children }) {
         <Toaster />
       </div>
 
-      <AnimatePresence>
-        {/* Navigation */}
-        <ErrorBoundary moduleName={"Navigation"}>
-          <Navigation />
-        </ErrorBoundary>
+      {/* Navigation */}
+      <ErrorBoundary moduleName={"Navigation"}>
+        <Navigation />
+      </ErrorBoundary>
 
-        <ErrorBoundary moduleName={"Main"}>
-          {/* Here goes the main content */}
-          <main className="m-6">{children}</main>
-        </ErrorBoundary>
+      <ErrorBoundary moduleName={"Main"}>
+        {/* Here goes the main content */}
+        <main className="m-6">{children}</main>
+      </ErrorBoundary>
 
-        {/* Footer */}
-        <ErrorBoundary moduleName={"Footer"}>
-          <Footer />
-        </ErrorBoundary>
+      {/* Footer */}
+      <ErrorBoundary moduleName={"Footer"}>
+        <Footer />
+      </ErrorBoundary>
 
-        {/* Fixed buttons */}
-        <InfoButton onclick={openInfoOverlay} />
+      {/* Fixed buttons */}
+      <InfoButton onclick={openInfoOverlay} />
 
-        {/* OVERLAYS */}
-        {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
-      </AnimatePresence>
+      {/* OVERLAYS */}
+      {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
     </>
   );
 }

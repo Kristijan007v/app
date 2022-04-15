@@ -2,17 +2,10 @@ import Link from "next/link";
 import { React, useState } from "react";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import { useTheme } from "next-themes";
-import MoonIcon from "../Icons/MoonIcon";
-import SunIcon from "../Icons/SunIcon";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme("dark");
-
-  const toogleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
 
   const openMenu = () => {
     setIsOpen(true);
@@ -62,11 +55,7 @@ export default function Navigation() {
 
         {/* Mobile menu button */}
         <div className="flex items-center space-x-4">
-          {theme === "dark" ? (
-            <SunIcon onclick={toogleTheme} />
-          ) : (
-            <MoonIcon onclick={toogleTheme} />
-          )}
+          <ThemeSwitch />
           <ButtonDefault
             text={"Menu"}
             style={"block md:hidden"}
