@@ -28,7 +28,11 @@ export default function Projects() {
       />
       <div className="flex flex-col space-y-4 p-4 text-center">
         <h2 className="heading__default__2">My personal projects</h2>
-        <LinkDefault href="/projects" text="See all projects" />
+        <LinkDefault
+          href="/projects"
+          text="See all projects"
+          align={"center"}
+        />
       </div>
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {project &&

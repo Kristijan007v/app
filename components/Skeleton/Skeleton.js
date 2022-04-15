@@ -2,6 +2,7 @@ import Navigation from "../Navigation/Navigation";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
+import InfoButton from "../Buttons/InfoButton";
 
 export default function Skeleton({ children }) {
   return (
@@ -20,6 +21,9 @@ export default function Skeleton({ children }) {
       <ErrorBoundary moduleName={"Footer"}>
         <Footer />
       </ErrorBoundary>
+
+      {/* Fixed buttons */}
+      <InfoButton />
     </>
   );
 }

@@ -15,6 +15,8 @@ module.exports = {
         graySpecial: "#9e9589",
         grayP: "#cecac3",
         special: "#30416b",
+        headingPrimary: "#b3b0ac",
+        headingSecondary: "#9e9589",
       },
     },
   },
