@@ -9,7 +9,7 @@ export default function MobileMenu({ closeMenu }) {
     <Backdrop
       onclick={closeMenu}
       buttonBottom
-      animationType={"top"}
+      animationType={"zoom"}
       style={"md:hidden"}
     >
       <div className="mx-6 flex flex-col items-center justify-center space-y-6">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import { useEffect, useState, React } from "react";
 import { Loading } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export default function PortifolioCard() {
   const [loaded, setLoaded] = useState(false);
@@ -12,9 +13,71 @@ export default function PortifolioCard() {
     }, 4000);
   }, []);
 
+  const dropInLeft = {
+    hidden: {
+      x: -100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+    },
+    visible: {
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        damping: 40,
+        stiffness: 500,
+      },
+    },
+    exit: {
+      x: -100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+    },
+  };
+
+  const zoom = {
+    hidden: {
+      x: 0,
+      y: 0,
+      scale: 0.5,
+      rotate: 0,
+    },
+    visible: {
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        damping: 40,
+        stiffness: 500,
+      },
+    },
+    exit: {
+      x: 0,
+      y: -60,
+      scale: 0.5,
+      rotate: 0,
+    },
+  };
+
   return (
     <div className="m-auto flex w-full flex-col -space-y-14 lg:w-4/5 lg:flex-row lg:items-center lg:-space-x-14">
-      <div className="relative h-96 w-full">
+      <motion.div
+        variants={zoom}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="relative h-96 w-full"
+      >
         {loaded ? (
           <Image
             priority
@@ -29,7 +92,7 @@ export default function PortifolioCard() {
             <Loading size="xl" />
           </div>
         )}
-      </div>
+      </motion.div>
       <div className="z-10 flex flex-col items-center space-y-6 lg:items-end lg:space-y-2">
         <p className="heading__default_3 hidden lg:block">Crofloor.com</p>
         <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/60 p-8 shadow-xl backdrop-blur-xl dark:bg-secondaryGray/60">

@@ -42,7 +42,7 @@ export default function About() {
           <div className="relative h-72 w-full">
             <Image
               priority
-              className="mask mask-squircle"
+              className="mask mask-squircle grayscale hover:grayscale-0"
               src={"/images/my_photo.webp"}
               layout="fill"
               objectFit="cover"

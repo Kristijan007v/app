@@ -56,11 +56,16 @@ export default function Backdrop({
 
   const dropInLeft = {
     hidden: {
-      x: "-100vh",
-      opacity: 0,
+      x: -100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
     },
     visible: {
-      y: "0",
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
       opacity: 1,
       transition: {
         duration: 0.3,
@@ -70,18 +75,25 @@ export default function Backdrop({
       },
     },
     exit: {
-      y: "-100vh",
-      opacity: 0,
+      x: -100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
     },
   };
 
   const dropInRight = {
     hidden: {
-      x: "-100vh",
-      opacity: 0,
+      x: 100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
     },
     visible: {
-      y: "0",
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
       opacity: 1,
       transition: {
         duration: 0.3,
@@ -91,8 +103,38 @@ export default function Backdrop({
       },
     },
     exit: {
-      y: "-100vh",
-      opacity: 0,
+      x: 100,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+    },
+  };
+
+  const zoom = {
+    hidden: {
+      x: 0,
+      y: 0,
+      scale: 0.5,
+      rotate: 0,
+    },
+    visible: {
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        damping: 40,
+        stiffness: 500,
+      },
+    },
+    exit: {
+      x: 0,
+      y: -60,
+      scale: 0.5,
+      rotate: 0,
     },
   };
 
@@ -133,7 +175,11 @@ export default function Backdrop({
               ? dropInTop
               : animationType == "left"
               ? dropInLeft
-              : dropInRight
+              : animationType == "right"
+              ? dropInRight
+              : animationType == "zoom"
+              ? zoom
+              : dropInBottom
           }
           initial="hidden"
           animate="visible"
