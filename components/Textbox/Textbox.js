@@ -4,7 +4,7 @@ import InfoIcon from "../Icons/InfoIcon";
 
 export default function Textbox({ title, text, type, closeModal }) {
   return (
-    <div className="flex flex-col items-center space-y-4 rounded-md bg-lightSecondaryGray p-8 dark:bg-primaryBg">
+    <div className="flex flex-col items-center space-y-4 rounded-lg bg-lightSecondaryGray p-8 dark:bg-primaryBg">
       <div className="flex flex-col space-y-4">
         <div className="flex items-center space-x-4">
           <InfoIcon />

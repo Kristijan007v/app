@@ -37,7 +37,7 @@ export default function PortifolioCard() {
           <p className="heading__default_3 block lg:hidden">
             BDF Logistics d.o.o
           </p>
-          <p className="text-center">
+          <p className="text-left md:text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <ButtonDefault
