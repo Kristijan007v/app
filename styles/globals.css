@@ -112,7 +112,7 @@ body {
 }
 
 .p__special {
-  @apply text-sm font-semibold text-blue-500 md:text-base lg:text-lg;
+  @apply text-base font-semibold text-blue-500 md:text-base lg:text-lg;
 }
 
 .border__default {

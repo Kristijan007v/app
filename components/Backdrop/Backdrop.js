@@ -10,6 +10,7 @@ export default function Backdrop({
   buttonBottom,
   animationType,
   style,
+  modal,
 }) {
   const dropInBottom = {
     hidden: {
@@ -117,7 +118,9 @@ export default function Backdrop({
         initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className={`overlay flex flex-col items-center justify-center ${style}`}
+        className={`overlay flex flex-col ${
+          modal ? "justify-end md:justify-center" : "justify-center"
+        } items-center  ${style}`}
         onClick={onclick}
       >
         {closeButton && <ButtonDefault text={"Close"} onclick={onclick} />}

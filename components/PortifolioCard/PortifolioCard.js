@@ -18,7 +18,7 @@ export default function PortifolioCard() {
         {loaded ? (
           <Image
             priority
-            className="cursor-pointer rounded-lg grayscale hover:grayscale-0"
+            className="hidden cursor-pointer rounded-lg grayscale hover:grayscale-0 md:block"
             src={"/images/crofloor.png"}
             layout="fill"
             objectFit="cover"
@@ -31,9 +31,7 @@ export default function PortifolioCard() {
         )}
       </div>
       <div className="z-10 flex flex-col items-center space-y-6 lg:items-end lg:space-y-2">
-        <p className="heading__default_3 hidden lg:block">
-          BDF Logistics d.o.o
-        </p>
+        <p className="heading__default_3 hidden lg:block">Crofloor.com</p>
         <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/60 p-8 shadow-xl backdrop-blur-xl dark:bg-secondaryGray/60">
           <p className="p__special block text-left lg:hidden">HTML CSS JS</p>
           <p className="heading__default_3 block lg:hidden">

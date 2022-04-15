@@ -5,11 +5,12 @@ import Textbox from "../Textbox/Textbox";
 
 export default function InfoOverlay({ closeOverlay }) {
   return (
-    <Backdrop onclick={closeOverlay} closeButton animationType={"bottom"}>
-      <div className="m-4">
+    <Backdrop onclick={closeOverlay} animationType={"bottom"} modal>
+      <div className="m-3">
         <Textbox
           title={"Website info"}
           text={"This website was created by me."}
+          closeModal={closeOverlay}
         />
       </div>
     </Backdrop>
