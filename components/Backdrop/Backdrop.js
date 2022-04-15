@@ -157,7 +157,7 @@ export default function Backdrop({
       onExitComplete={() => null}
     >
       <motion.div
-        initial={{ opacity: 0.8 }}
+        initial={{ opacity: 0.9 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className={`overlay flex flex-col ${
