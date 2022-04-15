@@ -21,7 +21,7 @@ export default function Projects() {
     },
   ];
   return (
-    <>
+    <div id="portifolio">
       <SectionHeading
         title="Portifolio"
         number={"02"}
@@ -51,6 +51,6 @@ export default function Projects() {
             />
           ))}
       </section>
-    </>
+    </div>
   );
 }

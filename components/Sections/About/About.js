@@ -5,7 +5,7 @@ import ButtonDefault from "../../Buttons/ButtonDefault";
 
 export default function About() {
   return (
-    <>
+    <div id="about">
       <SectionHeading
         title="About"
         number={"01"}
@@ -43,6 +43,6 @@ export default function About() {
         </pre>
       </div>
       <ButtonDefault text={"Download resume"} />
-    </>
+    </div>
   );
 }

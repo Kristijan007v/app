@@ -10,14 +10,14 @@ export default function MobileMenu({ closeMenu }) {
         <ButtonDefault text={"Close"} onclick={closeMenu} />
         <ul className=" flex flex-col space-y-8 text-center">
           <li>
-            <Link href={"/"}>
+            <Link href={"/#about"}>
               <a className="link__mobile">
                 <span className="special">01.</span> About
               </a>
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
+            <Link href={"/#portifolio"}>
               <a className="link__mobile">
                 {" "}
                 <span className="special">02.</span> Portifolio
@@ -25,7 +25,7 @@ export default function MobileMenu({ closeMenu }) {
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
+            <Link href={"/#contact-me"}>
               <a className="link__mobile">
                 {" "}
                 <span className="special">03.</span> Contact me

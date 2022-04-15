@@ -23,14 +23,14 @@ export default function Navigation() {
 
         <ul className="hidden space-x-4 md:flex">
           <li>
-            <Link href={"/"}>
+            <Link href={"/#about"}>
               <a className="link__default">
                 <span className="special">01.</span> About
               </a>
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
+            <Link href={"/#portifolio"}>
               <a className="link__default">
                 {" "}
                 <span className="special">02.</span> Portifolio
@@ -38,7 +38,7 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
+            <Link href={"/#contact-me"}>
               <a className="link__default">
                 {" "}
                 <span className="special">03.</span> Contact me

@@ -7,7 +7,7 @@ export default function InfoOverlay({ closeOverlay }) {
   return (
     <Backdrop>
       <ButtonDefault text={"Close"} onclick={closeOverlay} />
-      <div className="mt-6">
+      <div className="m-6">
         <Textbox
           title={"Website info"}
           text={"This website was created by me."}
