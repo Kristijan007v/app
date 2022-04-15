@@ -1,5 +1,5 @@
-import { React, useState } from "react";
 import Link from "next/link";
+import { React, useState } from "react";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -15,8 +15,8 @@ export default function Navigation() {
   };
 
   return (
-    <>
-      <nav className="sticky top-0 z-10 flex items-center justify-between bg-blue-100/60 p-4 text-gray-100 backdrop-blur-xl dark:bg-gray-800/60 md:p-6">
+    <nav className="sticky top-0 z-10 ">
+      <div className="flex items-center justify-between bg-blue-100/60 p-4 text-gray-100 backdrop-blur-xl dark:bg-gray-800/60 md:p-6">
         <Link href={"/"}>
           <a className="logo text-2xl font-bold text-blue-700">KV</a>
         </Link>
@@ -58,9 +58,10 @@ export default function Navigation() {
           style={"block md:hidden"}
           onclick={openMenu}
         />
-      </nav>
+      </div>
+      {/* Content progress bar */}
       {/* MobileMenu POPUP */}
       {isOpen && <MobileMenu closeMenu={closeMenu} />}
-    </>
+    </nav>
   );
 }
