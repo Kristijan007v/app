@@ -5,7 +5,7 @@ import LinkDefault from "../../LinkDefault/LinkDefault";
 
 export default function HeroHeader() {
   return (
-    <>
+    <div className="flex flex-col space-y-8 pb-10">
       <div className="flex flex-col space-y-4 rounded-tr-lg md:border-t-4 md:border-r-4 md:border-blue-700/80 md:p-8">
         <p className="special text-lg lg:text-xl">Hi, my name is</p>
         <h1 className="font-sans text-4xl font-extrabold text-headingPrimary lg:text-6xl">
@@ -22,6 +22,6 @@ export default function HeroHeader() {
       </div>
       <ButtonDefault text={"Check out my blog"} />
       <LinkDefault text={"Scroll down to find out more"} align={"center"} />
-    </>
+    </div>
   );
 }

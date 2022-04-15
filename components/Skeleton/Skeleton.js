@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import InfoButton from "../Buttons/InfoButton";
 import InfoOverlay from "../InfoOverlay/InfoOverlay";
 import { React, useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function Skeleton({ children }) {
   const [isInfoOverlayOpen, setIsInfoOverlayOpen] = useState(false);
@@ -19,6 +20,11 @@ export default function Skeleton({ children }) {
 
   return (
     <>
+      {/* Toast notifications */}
+      <div>
+        <Toaster />
+      </div>
+
       {/* Navigation */}
       <ErrorBoundary moduleName={"Navigation"}>
         <Navigation />

@@ -3,6 +3,7 @@ import SectionHeading from "../../SectionHeading/SectionHeading";
 import Image from "next/image";
 import ButtonDefault from "../../Buttons/ButtonDefault";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 export default function About() {
   return (
