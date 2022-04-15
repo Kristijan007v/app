@@ -122,5 +122,5 @@ body {
 
 /* Animations */
 .hover__translate {
-  @apply transform cursor-pointer transition duration-500 hover:-translate-y-4;
+  @apply transform cursor-pointer transition duration-500 hover:-translate-y-2 hover:md:-translate-y-4;
 }

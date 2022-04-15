@@ -13,10 +13,11 @@ export default function Home() {
   return (
     <>
       <Skeleton>
-        <div className="container flex flex-col space-y-8">
+        <div className="container flex flex-col space-y-12">
           {/* HERO HEADER */}
           <HeroHeader />
           {/* 01. ABOUT */}
+          <div id="about" className="scroll scroll-p-8"></div>
           <ErrorBoundary moduleName={"About"}>
             <About />
           </ErrorBoundary>

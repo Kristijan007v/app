@@ -1,11 +1,11 @@
-import Navigation from "../Navigation/Navigation";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-import ContactForm from "../ContactForm/ContactForm";
-import Footer from "../Footer/Footer";
-import InfoButton from "../Buttons/InfoButton";
-import InfoOverlay from "../InfoOverlay/InfoOverlay";
+import { AnimatePresence } from "framer-motion";
 import { React, useState } from "react";
 import { Toaster } from "react-hot-toast";
+import InfoButton from "../Buttons/InfoButton";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import Footer from "../Footer/Footer";
+import InfoOverlay from "../InfoOverlay/InfoOverlay";
+import Navigation from "../Navigation/Navigation";
 
 export default function Skeleton({ children }) {
   const [isInfoOverlayOpen, setIsInfoOverlayOpen] = useState(false);
@@ -25,26 +25,28 @@ export default function Skeleton({ children }) {
         <Toaster />
       </div>
 
-      {/* Navigation */}
-      <ErrorBoundary moduleName={"Navigation"}>
-        <Navigation />
-      </ErrorBoundary>
+      <AnimatePresence>
+        {/* Navigation */}
+        <ErrorBoundary moduleName={"Navigation"}>
+          <Navigation />
+        </ErrorBoundary>
 
-      <ErrorBoundary moduleName={"Main"}>
-        {/* Here goes the main content */}
-        <main className="m-6">{children}</main>
-      </ErrorBoundary>
+        <ErrorBoundary moduleName={"Main"}>
+          {/* Here goes the main content */}
+          <main className="m-6">{children}</main>
+        </ErrorBoundary>
 
-      {/* Footer */}
-      <ErrorBoundary moduleName={"Footer"}>
-        <Footer />
-      </ErrorBoundary>
+        {/* Footer */}
+        <ErrorBoundary moduleName={"Footer"}>
+          <Footer />
+        </ErrorBoundary>
 
-      {/* Fixed buttons */}
-      <InfoButton onclick={openInfoOverlay} />
+        {/* Fixed buttons */}
+        <InfoButton onclick={openInfoOverlay} />
 
-      {/* OVERLAYS */}
-      {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
+        {/* OVERLAYS */}
+        {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
+      </AnimatePresence>
     </>
   );
 }

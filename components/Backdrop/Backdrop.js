@@ -104,7 +104,15 @@ export default function Backdrop({
   }, []);
 
   return (
-    <AnimatePresence>
+    <AnimatePresence
+      initial={true}
+      // Only render one component at a time.
+      // The exiting component will finish its exit
+      // animation before entering component is rendered
+      exitBeforeEnter={true}
+      // Fires when all exiting nodes have completed animating out
+      onExitComplete={() => null}
+    >
       <motion.div
         initial={{ opacity: 0.8 }}
         animate={{ opacity: 1 }}

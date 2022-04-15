@@ -2,9 +2,17 @@ import Link from "next/link";
 import { React, useState } from "react";
 import ButtonDefault from "../Buttons/ButtonDefault";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { useTheme } from "next-themes";
+import MoonIcon from "../Icons/MoonIcon";
+import SunIcon from "../Icons/SunIcon";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toogleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   const openMenu = () => {
     setIsOpen(true);
@@ -15,7 +23,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-10 ">
+    <nav className={`sticky top-0 z-10`}>
       <div className="flex items-center justify-between bg-blue-100/60 p-4 text-gray-100 backdrop-blur-xl dark:bg-gray-800/60 md:p-6">
         <Link href={"/"}>
           <a className="logo text-2xl font-bold text-blue-700">KV</a>
@@ -53,11 +61,18 @@ export default function Navigation() {
         </ul>
 
         {/* Mobile menu button */}
-        <ButtonDefault
-          text={"Menu"}
-          style={"block md:hidden"}
-          onclick={openMenu}
-        />
+        <div className="flex items-center space-x-4">
+          {theme === "dark" ? (
+            <SunIcon onclick={toogleTheme} />
+          ) : (
+            <MoonIcon onclick={toogleTheme} />
+          )}
+          <ButtonDefault
+            text={"Menu"}
+            style={"block md:hidden"}
+            onclick={openMenu}
+          />
+        </div>
       </div>
       {/* Content progress bar */}
       {/* MobileMenu POPUP */}

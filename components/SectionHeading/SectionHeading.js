@@ -11,6 +11,7 @@ export default function SectionHeading({ number, title, desciption, align }) {
         <span className="special">{`${number}. `}</span>
         {title}
       </h2>
+
       <p className="p__default">{desciption}</p>
     </div>
   );
