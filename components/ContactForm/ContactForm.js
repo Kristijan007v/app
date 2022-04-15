@@ -34,7 +34,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="container flex flex-col space-y-6" id="contact-me">
+    <div
+      className="border__default container flex flex-col space-y-6"
+      id="contact-me"
+    >
       <SectionHeading
         number="03"
         title="Get in Touch"

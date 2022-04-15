@@ -23,13 +23,13 @@ export default function Projects() {
     },
   ];
   return (
-    <div id="portifolio" className="flex flex-col space-y-6">
+    <div id="portifolio" className="border__default flex flex-col space-y-6">
       <SectionHeading
         title="Portifolio"
         number={"02"}
         desciption={"Here are some of the websites I made for my clients."}
       />
-      <div className="mockup-window border bg-primaryGray">
+      <div className="bg-primaryGray mockup-window border">
         <div className="flex justify-center bg-gray-800 px-4 py-16">
           <div>Here goes the image.</div>
         </div>

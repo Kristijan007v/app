@@ -111,6 +111,10 @@ body {
   @apply text-sm font-semibold text-blue-700 md:text-base lg:text-lg;
 }
 
+.border__default {
+  @apply border-t-2 border-blue-600 pt-8;
+}
+
 /* Overlay */
 .overlay {
   @apply fixed top-0 bottom-0 right-0 left-0 z-30 bg-lightPrimaryBg/60 backdrop-blur-xl dark:bg-gray-800/60;

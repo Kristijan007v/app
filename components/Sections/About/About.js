@@ -30,7 +30,7 @@ export default function About() {
   };
 
   return (
-    <div id="about" className="flex flex-col space-y-6">
+    <div id="about" className="border__default flex flex-col space-y-6">
       <SectionHeading
         title="About"
         number={"01"}
