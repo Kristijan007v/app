@@ -49,8 +49,10 @@ export default function Projects() {
         desciption={"Here are some of the websites I made for my clients."}
       />
 
-      {/* PORTIFOLIO CARD */}
-      <PortifolioCard />
+      {/* PORTIFOLIO CARDS */}
+      <div className="flex flex-col space-y-16">
+        <PortifolioCard />
+      </div>
 
       <div className="flex flex-col space-y-4 p-4 text-center">
         <h2 className="heading__default__2">My personal projects</h2>
