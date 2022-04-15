@@ -5,8 +5,9 @@ export default function Document() {
     <Html lang="en">
       {/* Add whichever language you want here */}
       <Head>
-        <title>Kristijan Vidović</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#fff" />
       </Head>
       <body>
         <Main />
