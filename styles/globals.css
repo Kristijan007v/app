@@ -8,7 +8,10 @@
 /* Global styles */
 html,
 body {
-  @apply scroll-smooth font-monospace;
+  @apply scroll-smooth;
+}
+body {
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
@@ -35,7 +38,7 @@ body {
   @apply text-3xl font-semibold text-lightGrayP dark:text-gray-300;
 }
 
-.heading__default__2 {
+.heading__default_2 {
   @apply text-2xl font-semibold text-lightGrayP dark:text-gray-300 md:text-3xl lg:text-4xl;
 }
 
