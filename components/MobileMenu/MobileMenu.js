@@ -8,17 +8,17 @@ export default function MobileMenu({ closeMenu }) {
     <Backdrop>
       <div className="flex flex-col items-center justify-center space-y-6">
         <ButtonDefault text={"Close"} onclick={closeMenu} />
-        <ul className=" flex flex-col space-y-6">
+        <ul className=" flex flex-col space-y-8 text-center">
           <li>
             <Link href={"/"}>
-              <a className="link__default">
+              <a className="link__mobile">
                 <span className="special">01.</span> About
               </a>
             </Link>
           </li>
           <li>
             <Link href={"/"}>
-              <a className="link__default">
+              <a className="link__mobile">
                 {" "}
                 <span className="special">02.</span> Portifolio
               </a>
@@ -26,7 +26,7 @@ export default function MobileMenu({ closeMenu }) {
           </li>
           <li>
             <Link href={"/"}>
-              <a className="link__default">
+              <a className="link__mobile">
                 {" "}
                 <span className="special">03.</span> Contact me
               </a>

@@ -10,5 +10,9 @@ export default function Backdrop({ children }) {
     };
   }, []);
 
-  return <div className="overlay">{children}</div>;
+  return (
+    <div className="overlay flex flex-col items-center justify-center">
+      {children}
+    </div>
+  );
 }
