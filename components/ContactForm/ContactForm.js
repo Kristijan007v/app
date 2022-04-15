@@ -41,7 +41,9 @@ export default function ContactForm() {
         desciption={"Feel free to contact me and ask me anything you want. 😊"}
       />
       <form className="flex flex-col space-y-4">
-        <label className="label__default">Name:</label>
+        <label className="label__default" htmlFor="fullname">
+          Name:
+        </label>
         <input
           required
           className="input__default"
@@ -49,7 +51,9 @@ export default function ContactForm() {
           id="fullname"
           type={"text"}
         />
-        <label className="label__default">Email address:</label>
+        <label className="label__default" htmlFor="email">
+          Email address:
+        </label>
         <input
           required
           className="input__default"
@@ -58,7 +62,9 @@ export default function ContactForm() {
           id="email"
           onChange={validateEmail}
         />
-        <label className="label__default">Message:</label>
+        <label className="label__default" htmlFor="message">
+          Message:
+        </label>
         <textarea
           name={"message"}
           id="message"

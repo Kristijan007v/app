@@ -9,7 +9,11 @@ export default function HeroHeader() {
       <div className="flex flex-col space-y-4 rounded-tr-lg md:border-t-4 md:border-r-4 md:border-blue-700/80 md:p-8">
         <div className="avatar">
           <div className="w-24 rounded-full ring ring-blue-600 ring-offset-2 ring-offset-base-100">
-            <img src="/images/my_photo.webp" className="grayscale" />
+            <img
+              src="/images/my_photo.webp"
+              className="grayscale"
+              alt="My profile photo"
+            />
           </div>
         </div>
         <p className="special text-lg lg:text-xl">Hi, my name is</p>

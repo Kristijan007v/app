@@ -43,10 +43,10 @@ export default function About() {
             <Image
               priority
               className="mask mask-squircle"
-              alt={"Article Image"}
               src={"/images/my_photo.webp"}
               layout="fill"
               objectFit="cover"
+              alt={"My Photo"}
             />
           </div>
           <div className="mockup-code bg-secondaryGray">

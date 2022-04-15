@@ -108,7 +108,7 @@ body {
 
 /* Special styles */
 .special {
-  @apply text-blue-700;
+  @apply text-blue-500;
 }
 
 .p__special {
