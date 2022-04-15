@@ -50,6 +50,10 @@ body {
   @apply text-2xl font-semibold text-lightGrayP dark:text-grayP;
 }
 
+.heading__special__4 {
+  @apply text-xl font-semibold text-lightGrayP dark:text-grayP;
+}
+
 /* Paragraph */
 .p__default {
   @apply text-base font-semibold text-lightGraySpecial dark:font-medium dark:text-graySpecial md:text-lg lg:text-xl;
@@ -122,5 +126,5 @@ body {
 
 /* Animations */
 .hover__translate {
-  @apply transform cursor-pointer transition duration-500 hover:-translate-y-2 hover:md:-translate-y-4;
+  @apply transform cursor-pointer transition duration-500 hover:-translate-y-2;
 }

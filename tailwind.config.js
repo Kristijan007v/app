@@ -29,6 +29,9 @@ module.exports = {
         lightHeadingPrimary: "#111827",
         lightHeadingSecondary: "#4b5563",
       },
+      fontSize: {
+        "9xl": "10rem",
+      },
     },
   },
   plugins: [require("daisyui")],
