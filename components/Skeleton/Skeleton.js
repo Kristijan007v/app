@@ -3,8 +3,20 @@ import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import ContactForm from "../ContactForm/ContactForm";
 import Footer from "../Footer/Footer";
 import InfoButton from "../Buttons/InfoButton";
+import InfoOverlay from "../InfoOverlay/InfoOverlay";
+import { React, useState } from "react";
 
 export default function Skeleton({ children }) {
+  const [isInfoOverlayOpen, setIsInfoOverlayOpen] = useState(false);
+
+  const openInfoOverlay = () => {
+    setIsInfoOverlayOpen(true);
+  };
+
+  const closeInfoOverlay = () => {
+    setIsInfoOverlayOpen(false);
+  };
+
   return (
     <>
       {/* Navigation */}
@@ -23,7 +35,10 @@ export default function Skeleton({ children }) {
       </ErrorBoundary>
 
       {/* Fixed buttons */}
-      <InfoButton />
+      <InfoButton onclick={openInfoOverlay} />
+
+      {/* OVERLAYS */}
+      {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
     </>
   );
 }

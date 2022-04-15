@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../../SectionHeading/SectionHeading";
 import Image from "next/image";
+import ButtonDefault from "../../Buttons/ButtonDefault";
 
 export default function About() {
   return (
@@ -41,6 +42,7 @@ export default function About() {
           <code>Done!</code>
         </pre>
       </div>
+      <ButtonDefault text={"Download resume"} />
     </>
   );
 }

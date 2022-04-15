@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeading from "../../SectionHeading/SectionHeading";
 import LinkDefault from "../../LinkDefault/LinkDefault";
 import Card from "../../Card/Card";
+import Image from "next/image";
 
 export default function Projects() {
   const project = [
@@ -26,6 +27,11 @@ export default function Projects() {
         number={"02"}
         desciption={"Here are some of the websites I made for my clients."}
       />
+      <div className="mockup-window border bg-primaryGray">
+        <div className="flex justify-center bg-gray-800 px-4 py-16">
+          <div>Here goes the image.</div>
+        </div>
+      </div>
       <div className="flex flex-col space-y-4 p-4 text-center">
         <h2 className="heading__default__2">My personal projects</h2>
         <LinkDefault
