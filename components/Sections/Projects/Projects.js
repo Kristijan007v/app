@@ -21,7 +21,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div id="portifolio">
+    <div id="portifolio" className="flex flex-col space-y-6">
       <SectionHeading
         title="Portifolio"
         number={"02"}

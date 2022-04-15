@@ -2,10 +2,11 @@ import React from "react";
 import SectionHeading from "../../SectionHeading/SectionHeading";
 import Image from "next/image";
 import ButtonDefault from "../../Buttons/ButtonDefault";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <div id="about">
+    <div id="about" className="flex flex-col space-y-6">
       <SectionHeading
         title="About"
         number={"01"}
@@ -42,7 +43,9 @@ export default function About() {
           <code>Done!</code>
         </pre>
       </div>
-      <ButtonDefault text={"Download resume"} />
+      <Link href={"/documents/resume.pdf"}>
+        <a className="btn__default text-center">Download resume</a>
+      </Link>
     </div>
   );
 }

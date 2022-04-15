@@ -4,10 +4,7 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 
 export default function ContactForm() {
   return (
-    <div
-      className="container flex scroll-p-0 flex-col space-y-6"
-      id="contact-me"
-    >
+    <div className="container flex flex-col space-y-6" id="contact-me">
       <SectionHeading
         number="03"
         title="Get in Touch"
