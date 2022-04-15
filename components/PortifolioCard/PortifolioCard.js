@@ -97,6 +97,7 @@ export default function PortifolioCard({ reverse }) {
           ({ id, name, desc, programmingLanguages, href, src }) => {
             return (
               <div
+                key={id}
                 className={`m-auto flex w-full flex-col -space-y-14  lg:w-4/5 lg:flex-row lg:items-center lg:-space-x-14 ${
                   reverse && "lg:flex-row-reverse"
                 }`}
