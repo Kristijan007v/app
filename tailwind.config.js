@@ -9,7 +9,8 @@ module.exports = {
         monospace: ["Roboto Mono", "monospace"],
       },
       colors: {
-        primaryGray: "#0e131f",
+        /* Dark mode */
+        primaryBg: "#0e131f",
         secondaryGray: "#161c26",
         primaryBlue: "#1042ae",
         graySpecial: "#9e9589",
@@ -17,6 +18,15 @@ module.exports = {
         special: "#30416b",
         headingPrimary: "#b3b0ac",
         headingSecondary: "#9e9589",
+        /* Light mode */
+        lightPrimaryBg: "#bfdbfe",
+        lightSecondaryGray: "#cfe4fe",
+        lightPrimaryBlue: "#1042ae",
+        lightGraySpecial: "#1f2937",
+        lightGrayP: "#111827",
+        lightSpecial: "#30416b",
+        lightHeadingPrimary: "#111827",
+        lightHeadingSecondary: "#4b5563",
       },
     },
   },

@@ -8,10 +8,10 @@ export default function HeroHeader() {
     <div className="flex flex-col space-y-8 py-10">
       <div className="flex flex-col space-y-4 rounded-tr-lg md:border-t-4 md:border-r-4 md:border-blue-700/80 md:p-8">
         <p className="special text-lg lg:text-xl">Hi, my name is</p>
-        <h1 className="font-sans text-4xl font-extrabold text-headingPrimary lg:text-6xl">
+        <h1 className="font-sans text-4xl font-extrabold text-lightHeadingPrimary dark:text-headingPrimary lg:text-6xl">
           Kristijan Vidović.
         </h1>
-        <h2 className="font-sans text-4xl font-extrabold text-headingSecondary lg:text-6xl">
+        <h2 className="font-sans text-4xl font-extrabold text-lightHeadingSecondary dark:text-headingSecondary lg:text-6xl">
           I build things for the web.
         </h2>
         <p className="p__default">

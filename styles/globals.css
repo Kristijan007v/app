@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  @apply bg-primaryGray;
+  @apply bg-lightPrimaryBg dark:bg-primaryBg;
 }
 
 .container {
@@ -32,33 +32,33 @@ body {
 
 /* Headings */
 .heading__default {
-  @apply text-3xl font-semibold text-gray-300;
+  @apply text-3xl font-semibold text-lightGrayP dark:text-gray-300;
 }
 
 .heading__default__2 {
-  @apply text-2xl font-semibold text-gray-300 md:text-3xl lg:text-4xl;
+  @apply text-2xl font-semibold text-lightGrayP dark:text-gray-300 md:text-3xl lg:text-4xl;
 }
 
 .heading__default_3 {
-  @apply text-2xl font-semibold text-gray-300;
+  @apply text-2xl font-semibold text-lightGrayP dark:text-gray-300;
 }
 
 .heading__special__3 {
-  @apply text-2xl font-semibold text-grayP;
+  @apply text-2xl font-semibold text-lightGrayP dark:text-grayP;
 }
 
 /* Paragraph */
 .p__default {
-  @apply text-base font-medium text-graySpecial md:text-lg lg:text-xl;
+  @apply text-base font-semibold text-lightGraySpecial dark:font-medium dark:text-graySpecial md:text-lg lg:text-xl;
 }
 
 /* Links */
 .link__default {
-  @apply text-base font-semibold text-grayP hover:text-blue-600 hover:underline hover:underline-offset-8 md:text-lg lg:text-xl;
+  @apply text-base font-semibold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-grayP md:text-lg lg:text-xl;
 }
 
 .link__mobile {
-  @apply text-2xl font-semibold text-grayP hover:text-blue-600 hover:underline hover:underline-offset-8 md:text-lg lg:text-xl;
+  @apply text-2xl font-semibold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-grayP md:text-lg lg:text-xl;
 }
 
 .link__special {
@@ -69,7 +69,7 @@ body {
 
 /* Labels */
 .label__default {
-  @apply text-lg font-semibold text-grayP;
+  @apply text-lg font-semibold text-lightGrayP dark:text-grayP;
 }
 
 /* Inputs */
@@ -96,7 +96,7 @@ body {
 }
 
 .icon__link__special {
-  @apply text-xl font-semibold text-grayP hover:cursor-pointer hover:text-blue-600;
+  @apply text-xl font-semibold text-lightGrayP hover:cursor-pointer hover:text-blue-600 dark:text-grayP;
 }
 
 /* Special styles */
@@ -110,7 +110,7 @@ body {
 
 /* Overlay */
 .overlay {
-  @apply fixed top-0 bottom-0 right-0 left-0 z-30 backdrop-blur-xl dark:bg-gray-800/60;
+  @apply fixed top-0 bottom-0 right-0 left-0 z-30 bg-lightPrimaryBg/60 backdrop-blur-xl dark:bg-gray-800/60;
 }
 
 /* Animations */
