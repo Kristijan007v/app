@@ -1,7 +1,8 @@
 import Image from "next/image";
-import React from "react";
+import { React, useState } from "react";
 import toast from "react-hot-toast";
 import ButtonDefault from "../../Buttons/ButtonDefault";
+import LinkDefault from "../../LinkDefault/LinkDefault";
 import SectionHeading from "../../SectionHeading/SectionHeading";
 
 export default function About() {
@@ -18,6 +19,8 @@ export default function About() {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
   const downloadFile = () => {
     toast("🤞 Please wait...", toastStyle[0]);
     setTimeout(() => {
@@ -25,6 +28,7 @@ export default function About() {
       setTimeout(() => {
         toast("❤️ Okay here you go, sorry!", toastStyle[0]);
         window.location.href = "/documents/resume.pdf";
+        setIsVisible(true);
       }, 4200);
     }, 4000);
   };
@@ -74,6 +78,13 @@ export default function About() {
             onclick={downloadFile}
             ariaLabel={"Download my resume"}
           />
+          {isVisible && (
+            <LinkDefault
+              text={"Not working? Click here to download."}
+              href={"/documents/resume.pdf"}
+              align={"center"}
+            />
+          )}
         </div>
         <div className="rounded-md border border-blue-600 p-6">
           <p className="p__default">
