@@ -1,4 +1,5 @@
 import React from "react";
+import { Loading } from "@nextui-org/react";
 
 export default function ButtonDefault({
   text,
@@ -8,6 +9,7 @@ export default function ButtonDefault({
   href,
   linkIcon,
   ariaLabel,
+  loading,
 }) {
   const visitLink = () => {
     window.location.href = `${href}`;
@@ -26,6 +28,10 @@ export default function ButtonDefault({
       ) : linkIcon ? (
         <button className={`${style}`} onClick={onclick}>
           {text}
+        </button>
+      ) : loading ? (
+        <button className={`${style} btn__default`} onClick={onclick}>
+          <Loading>{text}</Loading>
         </button>
       ) : (
         <button className={`btn__default ${style}`} onClick={onclick}>

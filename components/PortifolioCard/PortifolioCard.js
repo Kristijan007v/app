@@ -130,7 +130,7 @@ export default function PortifolioCard({ reverse }) {
                   } lg:space-y-2`}
                 >
                   <p className="heading__default_3 hidden lg:block">{name}</p>
-                  <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/60 p-8 shadow-xl backdrop-blur-xl dark:bg-secondaryGray/60">
+                  <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/50 p-8 shadow-xl backdrop-blur-lg dark:bg-secondaryGray/60">
                     <p className="p__special block text-left lg:hidden">
                       {programmingLanguages}
                     </p>

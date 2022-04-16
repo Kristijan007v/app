@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         /* Dark mode */
         primaryBg: "#0e131f",
-        secondaryGray: "#161c26",
+        secondaryGray: "#1a2331",
         primaryBlue: "#1042ae",
         graySpecial: "#9e9589",
         grayP: "#cecac3",
@@ -20,8 +20,8 @@ module.exports = {
         headingPrimary: "#b3b0ac",
         headingSecondary: "#9e9589",
         /* Light mode */
-        lightPrimaryBg: "#bfdbfe",
-        lightSecondaryGray: "#cfe4fe",
+        lightPrimaryBg: "#fcfcfc",
+        lightSecondaryGray: "#e7f0fc",
         lightPrimaryBlue: "#1042ae",
         lightGraySpecial: "#1f2937",
         lightGrayP: "#111827",
@@ -30,8 +30,8 @@ module.exports = {
         lightHeadingSecondary: "#4b5563",
       },
       fontSize: {
-        "8xl": "9rem",
-        "9xl": "12rem",
+        "8xl": "8rem",
+        "9xl": "10rem",
       },
     },
   },
