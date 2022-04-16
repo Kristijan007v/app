@@ -121,7 +121,7 @@ body {
 
 /* Overlay */
 .overlay {
-  @apply fixed top-0 bottom-0 right-0 left-0 z-40 bg-lightPrimaryBg/60 backdrop-blur-xl dark:bg-gray-800/60;
+  @apply fixed top-0 bottom-0 right-0 left-0 z-40 bg-lightPrimaryBg/50 backdrop-blur-lg dark:bg-gray-800/50;
 }
 
 /* Animations */
