@@ -14,7 +14,7 @@ export default function Card({
   href,
 }) {
   return (
-    <div className="hover__translate flex flex-col justify-between space-y-2 rounded-lg bg-lightSecondaryGray p-6 shadow-md backdrop-blur-lg dark:bg-secondaryGray">
+    <div className="hover__border flex flex-col justify-between space-y-2 rounded-lg bg-lightSecondaryGray p-6 shadow-md backdrop-blur-lg dark:bg-secondaryGray">
       <div className="flex items-center justify-between">
         <FolderIcon />
         <div className="flex items-center space-x-4">

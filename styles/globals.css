@@ -136,3 +136,7 @@ body {
 .hover__translate {
   @apply transform cursor-pointer transition duration-500 hover:-translate-y-2;
 }
+
+.hover__border {
+  @apply transform cursor-pointer border border-transparent transition duration-500 hover:border hover:border-blue-500;
+}
