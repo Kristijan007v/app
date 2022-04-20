@@ -2,17 +2,20 @@ import React from "react";
 import ButtonDefault from "../../Buttons/ButtonDefault";
 import ArrowDownIcon from "../../Icons/ArrowDownIcon";
 import LinkDefault from "../../LinkDefault/LinkDefault";
+import Image from "next/image";
 
 export default function HeroHeader() {
   return (
     <div className="container__xl flex max-h-screen flex-col justify-center space-y-8 md:min-h-screen md:items-center">
       <div className="flex flex-col space-y-4 rounded-tr-lg md:border-t-4 md:border-r-4 md:border-blue-700/80 md:p-8">
         <div className="avatar">
-          <div className="w-24 rounded-full ring ring-blue-600 ring-offset-2 ring-offset-base-100">
-            <img
+          <div className="relative w-24 rounded-full ring ring-blue-600 ring-offset-2 ring-offset-base-100">
+            <Image
               src="/images/my_photo.webp"
-              className="grayscale"
               alt="My profile photo"
+              layout="fill"
+              objectFit="cover"
+              className="grayscale"
             />
           </div>
         </div>

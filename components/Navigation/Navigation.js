@@ -19,7 +19,7 @@ export default function Navigation() {
     <nav className={`sticky top-0 z-30`}>
       <div className="flex items-center justify-between bg-lightPrimaryBg/50 p-4 text-gray-100 shadow-sm backdrop-blur-lg dark:bg-gray-800/50 md:p-6">
         <Link href={"/"}>
-          <a className="logo text-2xl font-bold text-blue-700">KV</a>
+          <a className="logo text-2xl font-bold text-blue-500">KV</a>
         </Link>
 
         <ul className="hidden space-x-4 md:flex">

@@ -12,6 +12,10 @@ export default function Home() {
     <>
       <Head>
         <title>Homepage</title>
+        <meta
+          name="description"
+          content="Welcome to my website. Here you can find information about me and my projects. If you like, you can follow me on Linkedin and GitHub. Feel free to contact me for more information about my projects."
+        ></meta>
       </Head>
       <Skeleton>
         <div className="container flex flex-col space-y-12">

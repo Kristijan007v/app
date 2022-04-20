@@ -2,10 +2,14 @@ import React from "react";
 import ButtonDefault from "../components/Buttons/ButtonDefault";
 import Footer from "../components/Footer/Footer";
 import Navigation from "../components/Navigation/Navigation";
+import Head from "next/head";
 
 export default function Custom404() {
   return (
     <>
+      <Head>
+        <title>404 Page</title>
+      </Head>
       <Navigation />
       <div className="m-6 flex h-screen flex-col items-center justify-center">
         <p className="text-center font-sans text-8xl font-extrabold text-blue-600 lg:text-9xl">
