@@ -12,7 +12,7 @@ export default function Footer() {
         <InstagramIcon link href={"https://instagram.com/kristijan_007"} />
         <LinkedinIcon link href={"https://linkedin.com"} />
       </div>
-      <p className="text-sm font-semibold text-gray-600 dark:text-graySpecial md:text-lg lg:text-xl">
+      <p className="text-sm font-bold text-gray-600 dark:text-graySpecial md:text-lg lg:text-xl">
         Designed and made by Kristijan Vidović
       </p>
     </footer>

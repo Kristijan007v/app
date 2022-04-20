@@ -7,12 +7,17 @@ export default function ReadMore({ children, maxLength }) {
     setIsReadMore(!isReadMore);
   };
   return (
-    <p className="p__default">
-      {isReadMore ? text.slice(0, maxLength) : text}
-      <span onClick={toggleReadMore} className="uppercase text-blue-500">
+    <>
+      <p className="p__default">
+        {isReadMore ? text.slice(0, maxLength) : text}
         {isReadMore ? "..." : ""}
+      </p>
+      <span
+        onClick={toggleReadMore}
+        className="rounded-md bg-gray-700 p-1.5 text-center uppercase"
+      >
         {isReadMore ? " read more" : " show less"}
       </span>
-    </p>
+    </>
   );
 }
