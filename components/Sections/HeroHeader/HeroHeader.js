@@ -5,7 +5,7 @@ import LinkDefault from "../../LinkDefault/LinkDefault";
 
 export default function HeroHeader() {
   return (
-    <div className="flex max-h-screen flex-col justify-center space-y-8 md:min-h-screen md:items-center">
+    <div className="container__xl flex max-h-screen flex-col justify-center space-y-8 md:min-h-screen md:items-center">
       <div className="flex flex-col space-y-4 rounded-tr-lg md:border-t-4 md:border-r-4 md:border-blue-700/80 md:p-8">
         <div className="avatar">
           <div className="w-24 rounded-full ring ring-blue-600 ring-offset-2 ring-offset-base-100">

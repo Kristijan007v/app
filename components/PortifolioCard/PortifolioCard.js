@@ -98,8 +98,8 @@ export default function PortifolioCard({ reverse }) {
             return (
               <div
                 key={id}
-                className={`m-auto flex w-full flex-col -space-y-14  lg:w-4/5 lg:flex-row lg:items-center lg:-space-x-14 ${
-                  reverse && "lg:flex-row-reverse"
+                className={`m-auto flex w-full flex-col -space-y-14  lg:w-4/5 xl:flex-row xl:items-center xl:-space-x-14 ${
+                  reverse && "xl:flex-row-reverse"
                 }`}
               >
                 <motion.div
@@ -126,20 +126,20 @@ export default function PortifolioCard({ reverse }) {
                 </motion.div>
                 <div
                   className={`z-10 flex flex-col items-center space-y-6 ${
-                    reverse ? "lg:items-start" : "lg:items-end"
-                  } lg:space-y-2`}
+                    reverse ? "xl:items-start" : "xl:items-end"
+                  } xl:space-y-2`}
                 >
-                  <p className="heading__default_3 hidden lg:block">{name}</p>
+                  <p className="heading__default_3 hidden xl:block">{name}</p>
                   <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/50 p-8 shadow-xl backdrop-blur-lg dark:bg-secondaryGray/50">
-                    <p className="p__special block text-left lg:hidden">
+                    <p className="p__special block text-left xl:hidden">
                       {programmingLanguages}
                     </p>
-                    <p className="heading__default_3 block lg:hidden">{name}</p>
+                    <p className="heading__default_3 block xl:hidden">{name}</p>
                     <p className="text-left md:text-center">{desc}</p>
                     <ButtonDefault text={"Visit website"} link href={href} />
                   </div>
 
-                  <p className="p__special hidden pb-4 lg:block">
+                  <p className="p__special hidden pb-4 xl:block">
                     {programmingLanguages}
                   </p>
                 </div>

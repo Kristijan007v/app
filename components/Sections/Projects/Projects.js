@@ -42,7 +42,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="border__default flex flex-col space-y-6 pb-20">
+    <div className="border__default container__xl flex flex-col space-y-6 pb-20">
       <SectionHeading
         title="Portifolio"
         number={"02"}

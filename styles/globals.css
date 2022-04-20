@@ -18,8 +18,16 @@ body {
   @apply bg-lightPrimaryBg dark:bg-primaryBg;
 }
 
-.container {
+.container__sm {
+  @apply m-auto w-full md:w-4/6 lg:w-3/5 xl:w-2/5;
+}
+
+.container__md {
   @apply m-auto w-full md:w-5/6 lg:w-4/5 xl:w-3/5;
+}
+
+.container__xl {
+  @apply m-auto w-full md:w-5/6 lg:w-4/5;
 }
 
 /* Custom styles */

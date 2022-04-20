@@ -22,25 +22,34 @@ export default function ContactForm() {
     toast(message, toastStyle[0]);
   };
 
-  const validateEmail = (e) => {
-    var email = e.target.value;
+  const sendMail = async (data) => {
+    try {
+      await fetch("https://getform.io/f/96a58708-2d04-4b81-b52d-6f61841a45b3", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    if (validator.isEmail(email)) {
-      notification("Message sent succesfully!");
-    } else {
-      notification("Enter valid Email!");
-      e.preventDefault();
+      notification("💌 Message sent succesfully!");
+    } catch (error) {
+      notification("💌 Something went wrong, please try again later!");
     }
   };
 
   return (
-    <div className="border__default container flex flex-col space-y-8 pb-10">
+    <div className="border__default container__md flex flex-col space-y-8 pb-10">
       <SectionHeading
         number="03"
         title="Get in Touch"
         desciption={"Feel free to contact me and ask me anything you want. 😊"}
       />
-      <form className="flex flex-col space-y-4">
+      <form
+        className="flex flex-col space-y-4"
+        name="contact__form"
+        id="contact__form"
+        action="https://getform.io/f/96a58708-2d04-4b81-b52d-6f61841a45b3"
+        method="POST"
+      >
         <label className="label__default" htmlFor="fullname">
           Name:
         </label>
@@ -60,7 +69,6 @@ export default function ContactForm() {
           type={"email"}
           name={"email"}
           id="email"
-          onChange={validateEmail}
         />
         <label className="label__default" htmlFor="message">
           Message:
@@ -72,11 +80,17 @@ export default function ContactForm() {
           className="textarea__default"
           rows={"10"}
         />
+        <input
+          className="rounded bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700"
+          type="submit"
+          value="Say hello!"
+        />
       </form>
-      <ButtonDefault
+      {/* <ButtonDefault
+        type={"submit"}
+        form={"contact__form"}
         text={"Say hello!"}
-        onclick={() => notification("💌 Message sent succesfully!")}
-      />
+      /> */}
     </div>
   );
 }

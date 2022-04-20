@@ -10,6 +10,8 @@ export default function ButtonDefault({
   linkIcon,
   ariaLabel,
   loading,
+  form,
+  type,
 }) {
   const visitLink = () => {
     window.location.href = `${href}`;
@@ -22,6 +24,8 @@ export default function ButtonDefault({
           className={`btn__default ${style}`}
           onClick={visitLink}
           aria-label={ariaLabel}
+          form={form}
+          type={type}
         >
           {text}
         </button>

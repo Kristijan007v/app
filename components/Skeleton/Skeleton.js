@@ -31,7 +31,9 @@ export default function Skeleton({ children }) {
 
       <ErrorBoundary moduleName={"Main"}>
         {/* Here goes the main content */}
-        <main className="m-6">{children}</main>
+        <main className="m-6 flex flex-col items-center justify-center">
+          {children}
+        </main>
       </ErrorBoundary>
 
       {/* Footer */}
