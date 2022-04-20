@@ -1,8 +1,6 @@
+import Image from "next/image";
 import React from "react";
 import ButtonDefault from "../../Buttons/ButtonDefault";
-import ArrowDownIcon from "../../Icons/ArrowDownIcon";
-import LinkDefault from "../../LinkDefault/LinkDefault";
-import Image from "next/image";
 
 export default function HeroHeader() {
   return (
