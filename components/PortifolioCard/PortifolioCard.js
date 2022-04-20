@@ -3,6 +3,7 @@ import ButtonDefault from "../Buttons/ButtonDefault";
 import { useEffect, useState, React } from "react";
 import { Loading } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default function PortifolioCard({ reverse }) {
   const portifolio = [
@@ -31,8 +32,14 @@ export default function PortifolioCard({ reverse }) {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 4000);
+    }, 1500);
   }, []);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleChange = (isVisible) => {
+    setIsVisible(isVisible);
+  };
 
   const dropInLeft = {
     hidden: {
@@ -102,28 +109,32 @@ export default function PortifolioCard({ reverse }) {
                   reverse && "xl:flex-row-reverse"
                 }`}
               >
-                <motion.div
-                  variants={zoom}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className="relative h-96 w-full"
-                >
-                  {loaded ? (
-                    <Image
-                      priority
-                      className="hidden cursor-pointer rounded-lg grayscale hover:grayscale-0 md:block"
-                      src={src}
-                      layout="fill"
-                      objectFit="cover"
-                      alt={"My Photo"}
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center rounded-lg bg-lightSecondaryGray shadow-xl dark:bg-secondaryGray">
-                      <Loading size="xl" />
-                    </div>
-                  )}
-                </motion.div>
+                <VisibilitySensor onChange={handleChange}>
+                  <motion.div
+                    variants={zoom}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="relative h-96 w-full"
+                  >
+                    {loaded ? (
+                      <Image
+                        priority
+                        className={`hidden cursor-pointer rounded-lg ${
+                          isVisible ? "grayscale-0 lg:grayscale" : "grayscale"
+                        } md:block lg:hover:grayscale-0`}
+                        src={src}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={"My Photo"}
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center rounded-lg bg-lightSecondaryGray shadow-xl dark:bg-secondaryGray">
+                        <Loading size="xl" />
+                      </div>
+                    )}
+                  </motion.div>
+                </VisibilitySensor>
                 <div
                   className={`z-10 flex flex-col items-center space-y-6 ${
                     reverse ? "xl:items-start" : "xl:items-end"

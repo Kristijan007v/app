@@ -5,10 +5,14 @@ import About from "../components/Sections/About/About";
 import HeroHeader from "../components/Sections/HeroHeader/HeroHeader";
 import Projects from "../components/Sections/Projects/Projects";
 import Skeleton from "../components/Skeleton/Skeleton";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Homepage</title>
+      </Head>
       <Skeleton>
         <div className="container flex flex-col space-y-12">
           {/* HERO HEADER */}

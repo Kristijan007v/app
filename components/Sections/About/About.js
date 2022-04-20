@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import ButtonDefault from "../../Buttons/ButtonDefault";
 import LinkDefault from "../../LinkDefault/LinkDefault";
 import SectionHeading from "../../SectionHeading/SectionHeading";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default function About() {
   const toastStyle = [
@@ -20,6 +21,12 @@ export default function About() {
   ];
 
   const [isVisible, setIsVisible] = useState(false);
+
+  const [imageVisible, setImageVisible] = useState(false);
+
+  const handleChange = (imageVisible) => {
+    setImageVisible(imageVisible);
+  };
 
   const downloadFile = () => {
     toast("🤞 Please wait...", toastStyle[0]);
@@ -43,16 +50,20 @@ export default function About() {
       />
       <div className="flex flex-col space-y-8 md:space-x-6 lg:flex-row lg:items-start">
         <div className="flex flex-col space-y-6">
-          <div className="relative h-72 w-full">
-            <Image
-              priority
-              className="mask mask-squircle grayscale hover:grayscale-0"
-              src={"/images/my_photo.webp"}
-              layout="fill"
-              objectFit="cover"
-              alt={"My Photo"}
-            />
-          </div>
+          <VisibilitySensor onChange={handleChange}>
+            <div className="relative h-72 w-full">
+              <Image
+                priority
+                className={`mask mask-squircle ${
+                  imageVisible ? "grayscale-0" : "grayscale"
+                } hover:grayscale-0`}
+                src={"/images/my_photo.webp"}
+                layout="fill"
+                objectFit="cover"
+                alt={"My Photo"}
+              />
+            </div>
+          </VisibilitySensor>
           <div className="mockup-code bg-secondaryGray">
             <pre data-prefix="$">
               <code>print(date-of-birth)</code>
@@ -86,7 +97,10 @@ export default function About() {
             />
           )}
         </div>
-        <div className="rounded-md border border-blue-600 p-6">
+        <div className="flex flex-col space-y-4 rounded-md">
+          <p className="border-b-2 border-blue-600 pb-2 text-2xl text-blue-600 lg:text-3xl">
+            My story
+          </p>
           <p className="p__default">
             I am a software developer with a passion for creating beautiful
             applications. I have a strong background in web development and have
