@@ -22,20 +22,6 @@ export default function ContactForm() {
     toast(message, toastStyle[0]);
   };
 
-  const sendMail = async (data) => {
-    try {
-      await fetch("https://getform.io/f/96a58708-2d04-4b81-b52d-6f61841a45b3", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      notification("💌 Message sent succesfully!");
-    } catch (error) {
-      notification("💌 Something went wrong, please try again later!");
-    }
-  };
-
   return (
     <div className="border__default container__md flex flex-col space-y-8 pb-10">
       <SectionHeading
@@ -86,11 +72,6 @@ export default function ContactForm() {
           value="Say hello!"
         />
       </form>
-      {/* <ButtonDefault
-        type={"submit"}
-        form={"contact__form"}
-        text={"Say hello!"}
-      /> */}
     </div>
   );
 }

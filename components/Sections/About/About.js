@@ -41,7 +41,7 @@ export default function About() {
         desciption={"Let me introduce myself."}
         align={"left"}
       />
-      <div className="flex flex-col space-y-8 md:flex-row md:items-start md:space-x-6">
+      <div className="flex flex-col space-y-8 md:space-x-6 lg:flex-row lg:items-start">
         <div className="flex flex-col space-y-6">
           <div className="relative h-72 w-full">
             <Image
