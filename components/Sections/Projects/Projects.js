@@ -62,7 +62,7 @@ export default function Projects() {
           align={"center"}
         />
       </div>
-      <section className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
+      <section className="grid w-full auto-cols-max grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
         {project &&
           project.map(
             ({ id, year, name, desc, programmingLanguages, href }) => (

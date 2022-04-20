@@ -2,6 +2,7 @@ import React from "react";
 import FolderIcon from "../Icons/FolderIcon";
 import LinkIcon from "../Icons/LinkIcon";
 import GithubIcon from "../Icons/GithubIcon";
+import ReadMore from "../ReadMore/ReadMore";
 
 export default function Card({
   year,
@@ -22,7 +23,8 @@ export default function Card({
         </div>
       </div>
       <h3 className="heading__special__3">{title}</h3>
-      <p className="p__default">{desc}</p>
+      <ReadMore maxLength={150}>{desc}</ReadMore>
+
       <div className="flex space-x-2">
         {programmingLanguages ? (
           <p className="p__special">{programmingLanguages} </p>
