@@ -138,5 +138,5 @@ body {
 }
 
 .hover__border {
-  @apply transform cursor-pointer border border-transparent transition duration-500 hover:border hover:border-blue-500;
+  @apply transform cursor-pointer border-2 border-transparent transition duration-500 hover:border-2 hover:border-blue-500;
 }
