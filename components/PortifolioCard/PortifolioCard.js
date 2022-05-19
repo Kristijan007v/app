@@ -136,7 +136,7 @@ export default function PortifolioCard({ reverse }) {
                   </motion.div>
                 </VisibilitySensor>
                 <div
-                  className={`z-10 flex flex-col items-center -space-y-8 md:space-y-6 ${
+                  className={`z-10 flex flex-col items-center -space-y-10 md:space-y-6 ${
                     reverse ? "xl:items-start" : "xl:items-end"
                   } xl:space-y-2`}
                 >
