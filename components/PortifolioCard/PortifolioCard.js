@@ -115,7 +115,7 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full border border-red-500"
+                    className="relative h-96 w-full"
                   >
                     {loaded ? (
                       <Image

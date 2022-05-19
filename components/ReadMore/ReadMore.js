@@ -14,7 +14,7 @@ export default function ReadMore({ children, maxLength }) {
       </p>
       <span
         onClick={toggleReadMore}
-        className="rounded-md bg-gray-700 p-1.5 text-center uppercase"
+        className="rounded-md bg-white p-1.5 text-center uppercase dark:bg-gray-700"
       >
         {isReadMore ? " read more" : " show less"}
       </span>
