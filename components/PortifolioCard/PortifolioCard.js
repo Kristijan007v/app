@@ -115,17 +115,17 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full"
+                    className="relative h-96 w-full border border-red-500"
                   >
                     {loaded ? (
                       <Image
                         priority
-                        className={`hidden cursor-pointer rounded-lg ${
+                        className={`hidden cursor-pointer${
                           isVisible ? "grayscale-0 lg:grayscale" : "grayscale"
                         } md:block lg:hover:grayscale-0`}
                         src={src}
                         layout="fill"
-                        objectFit="cover"
+                        objectFit="contain"
                         alt={"My Photo"}
                       />
                     ) : (
@@ -136,7 +136,7 @@ export default function PortifolioCard({ reverse }) {
                   </motion.div>
                 </VisibilitySensor>
                 <div
-                  className={`z-10 flex flex-col items-center space-y-6 ${
+                  className={`z-10 flex flex-col items-center -space-y-8 md:space-y-6 ${
                     reverse ? "xl:items-start" : "xl:items-end"
                   } xl:space-y-2`}
                 >
