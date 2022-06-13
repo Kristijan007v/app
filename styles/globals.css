@@ -77,7 +77,7 @@ body {
 }
 
 .link__special {
-  @apply text-base font-semibold text-blue-500 hover:underline hover:underline-offset-8 md:text-lg lg:text-xl;
+  @apply font-mono text-base font-semibold text-blue-500 hover:underline hover:underline-offset-8 md:text-lg lg:text-xl;
 }
 
 /* FORM STYLES */

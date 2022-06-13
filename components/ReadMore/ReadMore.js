@@ -14,7 +14,7 @@ export default function ReadMore({ children, maxLength }) {
       </p>
       <span
         onClick={toggleReadMore}
-        className="rounded-md bg-lightSecondaryGray p-1.5 text-center font-semibold hover:cursor-pointer dark:bg-gray-700 dark:font-normal"
+        className="ontap-remove rounded-md bg-lightSecondaryGray p-1.5 text-center font-semibold hover:cursor-pointer dark:bg-gray-700 dark:font-normal"
       >
         {isReadMore ? " Read more" : " Show less"}
       </span>
