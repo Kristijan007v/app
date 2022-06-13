@@ -1,4 +1,8 @@
+import { Link } from "next/link";
+import React from "react";
+import Backdrop from "../Backdrop/Backdrop";
 import BackdropNew from "../BackdropNew/BackdropNew";
+import ButtonDefault from "../Buttons/ButtonDefault";
 import Textbox from "../Textbox/Textbox";
 
 export default function InfoOverlay({ closeOverlay }) {

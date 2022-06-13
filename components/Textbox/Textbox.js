@@ -11,7 +11,7 @@ export default function Textbox({
   children,
 }) {
   return (
-    <div className="flex flex-col items-center space-y-4 rounded-lg bg-lightSecondaryGray p-8 dark:bg-primaryBg">
+    <div className="flex flex-col items-center space-y-4 rounded-lg bg-lightSecondaryGray pt-8 pb-8 pr-6 pl-6 dark:bg-primaryBg">
       <div className="flex flex-col space-y-4">
         <div className="flex items-center space-x-4">
           <InfoIcon />
