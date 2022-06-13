@@ -115,12 +115,12 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full "
+                    className="relative h-96 w-full overflow-hidden rounded-xl"
                   >
                     {loaded ? (
                       <Image
                         priority
-                        className={`hidden cursor-pointer rounded-xl${
+                        className={`hidden rounded-xl${
                           isVisible ? "grayscale-0 lg:grayscale" : "grayscale"
                         } md:block lg:hover:grayscale-0`}
                         src={src}
