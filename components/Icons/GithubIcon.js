@@ -12,8 +12,7 @@ export default function GithubIcon({ onclick, link, href }) {
       {link ? (
         <IconContext.Provider
           value={{
-            className:
-              "text-2xl font-semibold text-lightGrayP hover:cursor-pointer hover:text-blue-600 dark:text-grayP",
+            className: "icon__social_2",
           }}
         >
           <FaGithub onClick={visitLink} />

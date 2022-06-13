@@ -99,7 +99,11 @@ body {
 
 /* Icons */
 .icon__social {
-  @apply text-4xl font-semibold text-gray-600 hover:cursor-pointer hover:text-blue-500 dark:text-graySpecial md:text-5xl;
+  @apply text-3xl font-semibold text-gray-600 hover:cursor-pointer hover:text-blue-500 dark:text-graySpecial dark:hover:text-blue-500 md:text-4xl;
+}
+
+.icon__social_2 {
+  @apply text-2xl font-semibold text-gray-600 hover:cursor-pointer hover:text-blue-500 dark:text-graySpecial dark:hover:text-blue-500 md:text-3xl;
 }
 
 .icon__special {
