@@ -23,14 +23,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="border__default container__md flex flex-col space-y-8 pb-10">
+    <div className="border__default container__md flex flex-col space-y-10 pb-10">
       <SectionHeading
         number="03"
         title="Get in Touch"
         desciption={"Feel free to contact me and ask me anything you want. 😊"}
       />
       <form
-        className="flex flex-col space-y-4"
+        className="n flex flex-col space-y-5"
         name="contact__form"
         id="contact__form"
         action="https://getform.io/f/96a58708-2d04-4b81-b52d-6f61841a45b3"
@@ -66,12 +66,13 @@ export default function ContactForm() {
           className="textarea__default"
           rows={"10"}
         />
-        <input
-          className="rounded bg-blue-600 py-2 px-4 font-semibold text-white hover:bg-blue-700"
-          type="submit"
-          value="Say hello!"
-        />
       </form>
+      <input
+        form="contact__form"
+        className="m-auto mt-20 w-full rounded bg-blue-600 py-2 px-4 font-semibold text-white hover:cursor-pointer hover:bg-blue-700 md:w-2/6 2xl:w-1/6"
+        type="submit"
+        value="Say hello!"
+      />
     </div>
   );
 }
