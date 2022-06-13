@@ -165,6 +165,7 @@ export default function Backdrop({
       {closeButton && <ButtonDefault text={"Close"} onclick={onclick} />}
 
       <motion.div
+        onClick={(e) => e.stopPropagation()}
         variants={
           animationType == "bottom"
             ? dropInBottom
