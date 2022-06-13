@@ -28,8 +28,14 @@ export default function Backdrop({
       },
     },
     exit: {
-      x: "100vh",
+      y: "100vh",
       opacity: 0,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        damping: 40,
+        stiffness: 500,
+      },
     },
   };
 
@@ -147,50 +153,40 @@ export default function Backdrop({
   }, []);
 
   return (
-    <AnimatePresence
-      initial={true}
-      // Only render one component at a time.
-      // The exiting component will finish its exit
-      // animation before entering component is rendered
-      exitBeforeEnter={true}
-      // Fires when all exiting nodes have completed animating out
-      onExitComplete={() => null}
+    <motion.div
+      initial={{ opacity: 0.9 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={`overlay flex flex-col ${
+        modal ? "justify-end md:justify-center" : "justify-center"
+      } items-center  ${style}`}
+      onClick={onclick}
     >
-      <motion.div
-        initial={{ opacity: 0.9 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className={`overlay flex flex-col ${
-          modal ? "justify-end md:justify-center" : "justify-center"
-        } items-center  ${style}`}
-        onClick={onclick}
-      >
-        {closeButton && <ButtonDefault text={"Close"} onclick={onclick} />}
+      {closeButton && <ButtonDefault text={"Close"} onclick={onclick} />}
 
-        <motion.div
-          variants={
-            animationType == "bottom"
-              ? dropInBottom
-              : animationType == "top"
-              ? dropInTop
-              : animationType == "left"
-              ? dropInLeft
-              : animationType == "right"
-              ? dropInRight
-              : animationType == "zoom"
-              ? zoom
-              : dropInBottom
-          }
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          {children}
-        </motion.div>
-        {buttonBottom && (
-          <ButtonDefault text={"Close"} onclick={onclick} style={"mt-8"} />
-        )}
+      <motion.div
+        variants={
+          animationType == "bottom"
+            ? dropInBottom
+            : animationType == "top"
+            ? dropInTop
+            : animationType == "left"
+            ? dropInLeft
+            : animationType == "right"
+            ? dropInRight
+            : animationType == "zoom"
+            ? zoom
+            : dropInBottom
+        }
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        {children}
       </motion.div>
-    </AnimatePresence>
+      {buttonBottom && (
+        <ButtonDefault text={"Close"} onclick={onclick} style={"mt-8"} />
+      )}
+    </motion.div>
   );
 }

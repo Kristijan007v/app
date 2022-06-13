@@ -6,7 +6,7 @@ import Textbox from "../Textbox/Textbox";
 export default function InfoOverlay({ closeOverlay }) {
   return (
     <Backdrop onclick={closeOverlay} animationType={"bottom"} modal>
-      <div className="m-3">
+      <div className="mb-3">
         <Textbox
           title={"Website info"}
           text={"This website was created by me."}

@@ -5,6 +5,7 @@ import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import Footer from "../Footer/Footer";
 import InfoOverlay from "../InfoOverlay/InfoOverlay";
 import Navigation from "../Navigation/Navigation";
+import { AnimatePresence } from "framer-motion";
 
 export default function Skeleton({ children }) {
   const [isInfoOverlayOpen, setIsInfoOverlayOpen] = useState(false);
@@ -45,7 +46,9 @@ export default function Skeleton({ children }) {
       <InfoButton onclick={openInfoOverlay} />
 
       {/* OVERLAYS */}
-      {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
+      <AnimatePresence exitBeforeEnter>
+        {isInfoOverlayOpen && <InfoOverlay closeOverlay={closeInfoOverlay} />}
+      </AnimatePresence>
     </>
   );
 }
