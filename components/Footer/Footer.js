@@ -10,7 +10,10 @@ export default function Footer() {
       <div className="flex items-center justify-center space-x-4">
         <GithubIcon link href={"https://github.com/kristijan007v"} />
         <InstagramIcon link href={"https://instagram.com/kristijan_007"} />
-        <LinkedinIcon link href={"https://linkedin.com"} />
+        <LinkedinIcon
+          link
+          href={"https://www.linkedin.com/in/kristijan-vidovic-05598b1b5"}
+        />
       </div>
       <p className="font-mono text-sm font-medium text-gray-600 dark:text-graySpecial md:text-lg">
         Designed and made by Kristijan Vidović

@@ -84,7 +84,7 @@ body {
 
 /* Labels */
 .label__default {
-  @apply font-mono text-lg font-semibold text-lightGrayP dark:text-grayP;
+  @apply font-mono text-base font-semibold text-lightGrayP dark:text-grayP md:text-lg;
 }
 
 /* Inputs */

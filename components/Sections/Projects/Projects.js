@@ -30,10 +30,11 @@ export default function Projects() {
       id: 3,
       year: "2022",
       name: "KV Blog",
-      desc: "My personal blog for posting usefull tips and tricks for web development and also tech news. The goal was to make nice looking, responive and fast website for the best user experience.",
+      desc: "My personal blog for posting usefull tips and tricks for web development and also tech news. The goal was to make nice looking, responsive and fast website for the best user experience.",
       programmingLanguages: "Next.js | Tailwind CSS | Sanity CMS",
       href: "https://devclub.vercel.app/",
       github: true,
+      githubLink: "https://github.com/kristijan007v",
     },
     {
       id: 4,
@@ -41,9 +42,8 @@ export default function Projects() {
       name: "Pixel Brick",
       desc: "This is an Android game I made with my friend when we were in highschool. We wanted to make easy and fun retro game that brings you back in your childhood.",
       programmingLanguages: "Construct 3",
-      href: "https://devclub.vercel.app/",
+      href: "https://drive.google.com/file/d/1NeLeSh-JmbV2Y-TcguOODshvykxO33Lu/view?usp=sharing",
       github: false,
-      githubLink: "https://gihub.com/kristijan007v",
     },
   ];
   return (
