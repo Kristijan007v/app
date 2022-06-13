@@ -22,13 +22,6 @@ export default function ButtonDefault({
     <>
       {link ? (
         <motion.button
-          whileHover={{
-            scale: 1.05,
-            transition: {
-              duration: 0.2,
-              ease: "easeInOut",
-            },
-          }}
           whileTap={{
             scale: 0.9,
             transition: {
@@ -46,13 +39,6 @@ export default function ButtonDefault({
         </motion.button>
       ) : linkIcon ? (
         <motion.button
-          whileHover={{
-            scale: 1.02,
-            transition: {
-              duration: 0.2,
-              ease: "easeInOut",
-            },
-          }}
           whileTap={{
             scale: 0.98,
             transition: {
@@ -67,13 +53,6 @@ export default function ButtonDefault({
         </motion.button>
       ) : loading ? (
         <motion.button
-          whileHover={{
-            scale: 1.05,
-            transition: {
-              duration: 0.2,
-              ease: "easeInOut",
-            },
-          }}
           whileTap={{
             scale: 0.9,
             transition: {
@@ -88,13 +67,6 @@ export default function ButtonDefault({
         </motion.button>
       ) : (
         <motion.button
-          whileHover={{
-            scale: 1.05,
-            transition: {
-              duration: 0.2,
-              ease: "easeInOut",
-            },
-          }}
           whileTap={{
             scale: 0.9,
             transition: {
