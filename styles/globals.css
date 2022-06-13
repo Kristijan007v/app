@@ -69,11 +69,11 @@ body {
 
 /* Links */
 .link__default {
-  @apply text-base font-semibold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-grayP md:text-lg;
+  @apply font-mono text-base font-semibold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-grayP md:text-lg;
 }
 
 .link__mobile {
-  @apply text-2xl font-bold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-gray-300 md:text-lg lg:text-xl;
+  @apply font-mono text-2xl font-bold text-lightGrayP hover:text-blue-600 hover:underline hover:underline-offset-8 dark:text-gray-300 md:text-lg lg:text-xl;
 }
 
 .link__special {
