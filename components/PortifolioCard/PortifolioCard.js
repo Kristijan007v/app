@@ -105,7 +105,7 @@ export default function PortifolioCard({ reverse }) {
             return (
               <div
                 key={id}
-                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-14 lg:w-4/5 xl:flex-row xl:items-center xl:-space-x-14 ${
+                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-14 lg:w-4/5 xl:flex-row xl:items-center xl:-space-x-14 xl:-space-y-0 ${
                   reverse && "xl:flex-row-reverse"
                 }`}
               >
@@ -115,12 +115,12 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full"
+                    className="relative h-96 w-full "
                   >
                     {loaded ? (
                       <Image
                         priority
-                        className={`hidden cursor-pointer${
+                        className={`hidden cursor-pointer rounded-xl${
                           isVisible ? "grayscale-0 lg:grayscale" : "grayscale"
                         } md:block lg:hover:grayscale-0`}
                         src={src}
@@ -138,7 +138,7 @@ export default function PortifolioCard({ reverse }) {
                 <div
                   className={`z-10 flex flex-col items-center -space-y-10 md:space-y-6 ${
                     reverse ? "xl:items-start" : "xl:items-end"
-                  } xl:space-y-2`}
+                  } xl:space-y-3`}
                 >
                   <p className="heading__default_3 hidden xl:block">{name}</p>
                   <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/50 p-8 shadow-xl backdrop-blur-lg dark:bg-secondaryGray/50">

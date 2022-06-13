@@ -120,7 +120,7 @@ body {
 }
 
 .p__special {
-  @apply font-mono text-sm font-medium text-blue-500;
+  @apply font-mono text-sm font-semibold text-blue-500 dark:font-medium;
 }
 
 .border__default {
@@ -139,4 +139,17 @@ body {
 
 .hover__border {
   @apply transform  border border-transparent transition duration-500 hover:border hover:border-blue-500;
+}
+
+/* GLOBAL */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ontap-remove {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.debug {
+  @apply border-2 border-red-600;
 }

@@ -59,7 +59,7 @@ export default function Projects() {
         <PortifolioCard />
       </div>
 
-      <div className="flex flex-col space-y-4 p-4 text-center">
+      <div className="mb-6 flex flex-col space-y-4 p-4 text-center md:mb-8">
         <h2 className="heading__default__2">My personal projects</h2>
         <LinkDefault
           href="/projects"
@@ -67,7 +67,7 @@ export default function Projects() {
           align={"center"}
         />
       </div>
-      <section className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
+      <section className="grid w-full grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {project &&
           project.map(
             ({
