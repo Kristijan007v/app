@@ -17,7 +17,7 @@ export default function HeroHeader() {
             />
           </div>
         </div>
-        <p className="special text-lg lg:text-xl">Hi, my name is</p>
+        <p className="special font-mono text-lg lg:text-xl">Hi, my name is</p>
         <h1 className="font-sans text-4xl font-extrabold text-lightHeadingPrimary dark:text-headingPrimary lg:text-6xl">
           Kristijan Vidović.
         </h1>
@@ -25,9 +25,21 @@ export default function HeroHeader() {
           I build things for the web.
         </h2>
         <p className="p__default">
-          Frontend developer who&apos;s favourite JS Framework is Svelte, who
-          got in love with Tailwind CSS and just loves to programm stuff. Python
-          all the way. 😊
+          Frontend developer who&apos;s favourite JS Framework is{" "}
+          <a
+            className="text-blue-500 underline-offset-4 hover:underline"
+            href="https://nextjs.org/"
+          >
+            Next.js
+          </a>
+          , who got in love with{" "}
+          <a
+            className="text-blue-500 underline-offset-4 hover:underline"
+            href="https://tailwindcss.com/"
+          >
+            Tailwind CSS
+          </a>{" "}
+          and just loves to programm stuff. 😊
         </p>
       </div>
       <ButtonDefault

@@ -144,9 +144,6 @@ export default function PortifolioCard({ reverse }) {
                 >
                   <p className="heading__default_3 hidden xl:block">{name}</p>
                   <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/50 p-8 shadow-xl backdrop-blur-lg dark:bg-secondaryGray/50">
-                    <p className="p__special block text-left xl:hidden">
-                      {programmingLanguages}
-                    </p>
                     <p className="heading__default_3 block xl:hidden">{name}</p>
                     <p
                       className={`${id % 2 == 0 ? "text-left" : "text-right"}`}
@@ -154,6 +151,9 @@ export default function PortifolioCard({ reverse }) {
                       {desc}
                     </p>
                     <ButtonDefault text={"Visit website"} link href={href} />
+                    <p className="p__special block text-left xl:hidden">
+                      {programmingLanguages}
+                    </p>
                   </div>
 
                   <p className="p__special hidden pb-4 xl:block">

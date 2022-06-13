@@ -64,8 +64,17 @@ export default function About() {
               />
             </div>
           </VisibilitySensor>
-          <div className="mockup-code bg-secondaryGray">
-            <pre data-prefix="$">
+          <div className="mockup-code bg-lightSecondaryGray dark:bg-secondaryGray">
+            <pre data-prefix="$" className="text-gray-900 dark:text-white">
+              <code>print(name-surname)</code>
+            </pre>
+            <pre data-prefix=">" className="text-warning">
+              <code>Kristijan Vidović</code>
+            </pre>
+            <pre data-prefix=">" className="text-success">
+              <code>Done!</code>
+            </pre>
+            <pre data-prefix="$" className="text-gray-900 dark:text-white">
               <code>print(date-of-birth)</code>
             </pre>
             <pre data-prefix=">" className="text-warning">
@@ -74,11 +83,14 @@ export default function About() {
             <pre data-prefix=">" className="text-success">
               <code>Done!</code>
             </pre>
-            <pre data-prefix="$">
+            <pre data-prefix="$" className="text-gray-900 dark:text-white">
               <code>print(education)</code>
             </pre>
             <pre data-prefix=">" className="text-warning">
               <code>Highscool: Gimnazija Sesvete (2015-2019)</code>
+            </pre>
+            <pre data-prefix=">" className="text-warning">
+              <code>University: TVZ (2019-today)</code>
             </pre>
             <pre data-prefix=">" className="text-success">
               <code>Done!</code>
@@ -97,15 +109,14 @@ export default function About() {
             />
           )}
         </div>
-        <div className="flex flex-col space-y-4 rounded-md">
-          <p className="border-b-2 border-blue-600 pb-2 text-2xl text-blue-600 lg:text-3xl">
-            My story
-          </p>
-          <p className="p__default">
-            I am a software developer with a passion for creating beautiful
-            applications. I have a strong background in web development and have
-            been working in the field for the last 5 years. I am a self-taught
-            developer and I am constantly learning new things.
+        <div className="flex flex-col space-y-5 rounded-md">
+          <p className="text-2xl font-semibold lg:text-3xl">My story</p>
+          <p className="p__default rounded-xl bg-lightSecondaryGray p-4 dark:bg-secondaryGray">
+            I am a self-taught software developer with a passion for creating
+            beautiful 💄, fast ⚡, and responsive 📱 websites. I have a strong
+            background in web development and I love to work with new web
+            technologies and I am always looking for new ways to improve my
+            skills 🤓 and knowledge 📖.
           </p>
         </div>
       </div>

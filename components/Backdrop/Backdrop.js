@@ -11,6 +11,7 @@ export default function Backdrop({
   animationType,
   style,
   modal,
+  propagation,
 }) {
   const dropInBottom = {
     hidden: {
@@ -165,7 +166,6 @@ export default function Backdrop({
       {closeButton && <ButtonDefault text={"Close"} onclick={onclick} />}
 
       <motion.div
-        onClick={(e) => e.stopPropagation()}
         variants={
           animationType == "bottom"
             ? dropInBottom

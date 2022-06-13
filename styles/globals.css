@@ -124,7 +124,7 @@ body {
 }
 
 .p__special {
-  @apply font-mono text-sm font-semibold text-blue-500 dark:font-medium;
+  @apply font-mono text-sm font-semibold text-blue-500;
 }
 
 .border__default {
