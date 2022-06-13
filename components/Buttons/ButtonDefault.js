@@ -1,5 +1,6 @@
 import React from "react";
 import { Loading } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export default function ButtonDefault({
   text,
@@ -20,7 +21,21 @@ export default function ButtonDefault({
   return (
     <>
       {link ? (
-        <button
+        <motion.button
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          whileTap={{
+            scale: 0.9,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
           className={`btn__default ${style}`}
           onClick={visitLink}
           aria-label={ariaLabel}
@@ -28,19 +43,70 @@ export default function ButtonDefault({
           type={type}
         >
           {text}
-        </button>
+        </motion.button>
       ) : linkIcon ? (
-        <button className={`${style}`} onClick={onclick}>
+        <motion.button
+          whileHover={{
+            scale: 1.02,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          whileTap={{
+            scale: 0.98,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          className={`${style}`}
+          onClick={onclick}
+        >
           {text}
-        </button>
+        </motion.button>
       ) : loading ? (
-        <button className={`${style} btn__default`} onClick={onclick}>
+        <motion.button
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          whileTap={{
+            scale: 0.9,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          className={`${style} btn__default`}
+          onClick={onclick}
+        >
           <Loading>{text}</Loading>
-        </button>
+        </motion.button>
       ) : (
-        <button className={`btn__default ${style}`} onClick={onclick}>
+        <motion.button
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          whileTap={{
+            scale: 0.9,
+            transition: {
+              duration: 0.2,
+              ease: "easeInOut",
+            },
+          }}
+          className={`btn__default ${style}`}
+          onClick={onclick}
+        >
           {text}
-        </button>
+        </motion.button>
       )}
     </>
   );

@@ -120,7 +120,7 @@ body {
 }
 
 .p__special {
-  @apply font-mono text-base font-medium text-blue-500 md:text-base lg:text-lg;
+  @apply font-mono text-sm font-medium text-blue-500;
 }
 
 .border__default {
