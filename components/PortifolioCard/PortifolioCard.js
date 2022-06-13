@@ -105,7 +105,7 @@ export default function PortifolioCard({ reverse }) {
             return (
               <div
                 key={id}
-                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-14 lg:w-4/5 xl:items-center xl:-space-x-14 xl:-space-y-0 ${
+                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-6 md:-space-y-12 lg:w-4/5 xl:items-center xl:-space-x-14 xl:-space-y-0 ${
                   id % 2 == 0 ? "xl:flex-row-reverse" : "xl:flex-row"
                 }`}
               >
@@ -136,7 +136,7 @@ export default function PortifolioCard({ reverse }) {
                   </motion.div>
                 </VisibilitySensor>
                 <div
-                  className={`z-10 flex w-4/6 flex-col items-center -space-y-10 md:space-y-6 ${
+                  className={`z-10 flex w-full flex-col items-center -space-y-10 md:space-y-6 xl:w-4/6 ${
                     id % 2 == 0
                       ? "xl:translate-x-10 xl:items-start"
                       : "xl:-translate-x-10 xl:items-end"
@@ -146,7 +146,9 @@ export default function PortifolioCard({ reverse }) {
                   <div className="flex flex-col justify-between space-y-4 rounded-lg bg-lightSecondaryGray/50 p-8 shadow-xl backdrop-blur-lg dark:bg-secondaryGray/50">
                     <p className="heading__default_3 block xl:hidden">{name}</p>
                     <p
-                      className={`${id % 2 == 0 ? "text-left" : "text-right"}`}
+                      className={` text-left ${
+                        id % 2 == 0 ? "xl:text-left" : "xl:text-right"
+                      }`}
                     >
                       {desc}
                     </p>
