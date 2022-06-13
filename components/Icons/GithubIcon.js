@@ -1,6 +1,6 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { AiOutlineGithub } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 
 export default function GithubIcon({ onclick, link, href }) {
   const visitLink = () => {
@@ -12,10 +12,10 @@ export default function GithubIcon({ onclick, link, href }) {
       {link ? (
         <IconContext.Provider
           value={{
-            className: "icon__social",
+            className: "icon__link__special",
           }}
         >
-          <AiOutlineGithub onClick={visitLink} />
+          <FaGithub onClick={visitLink} />
         </IconContext.Provider>
       ) : (
         <IconContext.Provider
@@ -23,7 +23,7 @@ export default function GithubIcon({ onclick, link, href }) {
             className: "icon__social",
           }}
         >
-          <AiOutlineGithub />
+          <FaGithub />
         </IconContext.Provider>
       )}
     </>

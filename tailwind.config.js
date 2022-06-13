@@ -11,8 +11,8 @@ module.exports = {
       },
       colors: {
         /* Dark mode */
-        primaryBg: "#0e131f",
-        secondaryGray: "#1a2331",
+        primaryBg: "#0b0f19",
+        secondaryGray: "#151c27",
         primaryBlue: "#1042ae",
         graySpecial: "#A6A6A5",
         grayP: "#cecac3",

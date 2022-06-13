@@ -14,6 +14,7 @@ export default function Projects() {
       desc: "I made this projects while working as System Administrator at RTL Croatia d.o.o because we needed a solution for storing notes, passwords, scripts and solutions to some common problems we were facing everyday.",
       programmingLanguages: "HTML | CSS | JS | PHP",
       href: "https://ss-portal.kristijan-projects.xyz/",
+      github: false,
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export default function Projects() {
       href: "https://devclub.vercel.app/",
       programmingLanguages: "HTML | CSS | JS | PHP",
       href: "https://searchitup.kristijan-projects.xyz/",
+      github: false,
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ export default function Projects() {
       desc: "My personal blog for posting usefull tips and tricks for web development and also tech news. The goal was to make nice looking, responive and fast website for the best user experience.",
       programmingLanguages: "Next.js | Tailwind CSS | Sanity CMS",
       href: "https://devclub.vercel.app/",
+      github: true,
     },
     {
       id: 4,
@@ -39,6 +42,8 @@ export default function Projects() {
       desc: "This is an Android game I made with my friend when we were in highschool. We wanted to make easy and fun retro game that brings you back in your childhood.",
       programmingLanguages: "Construct 3",
       href: "https://devclub.vercel.app/",
+      github: false,
+      githubLink: "https://gihub.com/kristijan007v",
     },
   ];
   return (
@@ -65,7 +70,16 @@ export default function Projects() {
       <section className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
         {project &&
           project.map(
-            ({ id, year, name, desc, programmingLanguages, href }) => (
+            ({
+              id,
+              year,
+              name,
+              desc,
+              programmingLanguages,
+              href,
+              github,
+              githubLink,
+            }) => (
               <Card
                 key={id}
                 year={year}
@@ -74,6 +88,8 @@ export default function Projects() {
                 programmingLanguages={programmingLanguages}
                 href={`${href}`}
                 linkicon={true}
+                github={github}
+                githubLink={githubLink}
               />
             )
           )}

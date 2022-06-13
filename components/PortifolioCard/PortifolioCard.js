@@ -125,7 +125,7 @@ export default function PortifolioCard({ reverse }) {
                         } md:block lg:hover:grayscale-0`}
                         src={src}
                         layout="fill"
-                        objectFit="contain"
+                        objectFit="cover"
                         alt={"My Photo"}
                       />
                     ) : (

@@ -10,9 +10,9 @@ html,
 body {
   @apply scroll-smooth;
 }
-body {
+/* body {
   font-family: "Roboto Mono", monospace;
-}
+} */
 
 body {
   @apply bg-lightPrimaryBg dark:bg-primaryBg;
@@ -64,7 +64,7 @@ body {
 
 /* Paragraph */
 .p__default {
-  @apply text-base font-semibold text-lightGraySpecial dark:font-medium dark:text-graySpecial md:text-lg lg:text-xl;
+  @apply font-sans text-base font-normal text-lightGraySpecial dark:font-normal dark:text-graySpecial md:text-lg;
 }
 
 /* Links */
@@ -120,7 +120,7 @@ body {
 }
 
 .p__special {
-  @apply text-base font-semibold text-blue-500 md:text-base lg:text-lg;
+  @apply font-mono text-base font-medium text-blue-500 md:text-base lg:text-lg;
 }
 
 .border__default {
@@ -134,9 +134,9 @@ body {
 
 /* Animations */
 .hover__translate {
-  @apply transform cursor-pointer transition duration-500 hover:-translate-y-2;
+  @apply transform transition duration-500 hover:-translate-y-2;
 }
 
 .hover__border {
-  @apply transform cursor-pointer border-2 border-transparent transition duration-500 hover:border-2 hover:border-blue-500;
+  @apply transform  border border-transparent transition duration-500 hover:border hover:border-blue-500;
 }

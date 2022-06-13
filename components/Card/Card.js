@@ -12,20 +12,21 @@ export default function Card({
   github,
   linkicon,
   href,
+  githubLink,
 }) {
   return (
-    <div className="hover__border flex flex-col justify-between space-y-2 rounded-lg bg-lightSecondaryGray p-6 shadow-md backdrop-blur-lg dark:bg-secondaryGray">
+    <div className="hover__border flex flex-col justify-between space-y-3 rounded-lg bg-lightSecondaryGray p-6 shadow-md backdrop-blur-lg dark:bg-secondaryGray">
       <div className="flex items-center justify-between">
         <FolderIcon />
-        <div className="flex items-center space-x-4">
-          {github && <GithubIcon />}
+        <div className="flex items-center space-x-5">
+          {github && <GithubIcon link href={githubLink} />}
           {linkicon && <LinkIcon href={href} />}
         </div>
       </div>
       <h3 className="heading__special__3">{title}</h3>
       <ReadMore maxLength={150}>{desc}</ReadMore>
 
-      <div className="flex space-x-2">
+      <div className="flex space-x-3">
         {programmingLanguages ? (
           <p className="p__special">{programmingLanguages} </p>
         ) : (
