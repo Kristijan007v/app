@@ -7,7 +7,7 @@ import Textbox from "../Textbox/Textbox";
 
 export default function InfoOverlay({ closeOverlay }) {
   return (
-    <BackdropNew onclick={closeOverlay} animationType={"bottom"} modal>
+    <Backdrop onclick={closeOverlay} animationType={"bottom"} modal>
       <div className="m-3">
         <Textbox
           title={"Website info"}
@@ -28,6 +28,6 @@ export default function InfoOverlay({ closeOverlay }) {
           .
         </Textbox>
       </div>
-    </BackdropNew>
+    </Backdrop>
   );
 }

@@ -115,7 +115,7 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full overflow-hidden rounded-xl"
+                    className="relative h-96 w-full flex-grow overflow-hidden rounded-xl"
                   >
                     {loaded ? (
                       <Image
@@ -136,7 +136,7 @@ export default function PortifolioCard({ reverse }) {
                   </motion.div>
                 </VisibilitySensor>
                 <div
-                  className={`z-10 flex flex-col items-center -space-y-10 md:space-y-6 ${
+                  className={`z-10 flex w-4/6 flex-col items-center -space-y-10 md:space-y-6 ${
                     id % 2 == 0
                       ? "xl:translate-x-10 xl:items-start"
                       : "xl:-translate-x-10 xl:items-end"
