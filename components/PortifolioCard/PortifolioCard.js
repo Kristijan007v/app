@@ -105,8 +105,8 @@ export default function PortifolioCard({ reverse }) {
             return (
               <div
                 key={id}
-                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-14 lg:w-4/5 xl:flex-row xl:items-center xl:-space-x-14 xl:-space-y-0 ${
-                  reverse && "xl:flex-row-reverse"
+                className={`m-auto mt-20 mb-20 flex w-full flex-col  -space-y-14 lg:w-4/5 xl:items-center xl:-space-x-14 xl:-space-y-0 ${
+                  id % 2 == 0 ? "xl:flex-row-reverse" : "xl:flex-row"
                 }`}
               >
                 <VisibilitySensor onChange={handleChange}>
@@ -137,7 +137,9 @@ export default function PortifolioCard({ reverse }) {
                 </VisibilitySensor>
                 <div
                   className={`z-10 flex flex-col items-center -space-y-10 md:space-y-6 ${
-                    reverse ? "xl:items-start" : "xl:items-end"
+                    id % 2 == 0
+                      ? "xl:translate-x-10 xl:items-start"
+                      : "xl:-translate-x-10 xl:items-end"
                   } xl:space-y-3`}
                 >
                   <p className="heading__default_3 hidden xl:block">{name}</p>
@@ -146,7 +148,11 @@ export default function PortifolioCard({ reverse }) {
                       {programmingLanguages}
                     </p>
                     <p className="heading__default_3 block xl:hidden">{name}</p>
-                    <p className="text-left md:text-center">{desc}</p>
+                    <p
+                      className={`${id % 2 == 0 ? "text-left" : "text-right"}`}
+                    >
+                      {desc}
+                    </p>
                     <ButtonDefault text={"Visit website"} link href={href} />
                   </div>
 

@@ -21,7 +21,7 @@ export default function Textbox({
         </div>
         {/* Footer */}
 
-        <p className="p__default flex flex-col space-y-3 rounded-md bg-secondaryGray p-3">
+        <p className="p__default flex flex-col space-y-3 rounded-md  p-3">
           <span>{text}</span>
           <span>{children}</span>
         </p>
