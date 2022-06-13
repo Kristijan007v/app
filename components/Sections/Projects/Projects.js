@@ -45,6 +45,15 @@ export default function Projects() {
       href: "https://drive.google.com/file/d/1NeLeSh-JmbV2Y-TcguOODshvykxO33Lu/view?usp=sharing",
       github: false,
     },
+    {
+      id: 5,
+      year: "2022",
+      name: "TVZ Toolbox",
+      desc: "Tool for TVZ students to enhance their experience with Moj TVZ website, such as filling out forms or changing website style.",
+      programmingLanguages: "HTML | Tailwind CSS | JS",
+      href: "https://chrome.google.com/webstore/detail/tvz-toolbox/jdjogcdnfopbfngjmpkabfbjeagonank?hl=en",
+      github: false,
+    },
   ];
   return (
     <div className="border__default container__xl flex flex-col pb-20">
