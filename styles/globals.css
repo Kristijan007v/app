@@ -142,7 +142,7 @@ body {
 }
 
 .hover__border {
-  @apply transform  border border-transparent transition duration-500 hover:border hover:border-blue-500;
+  @apply transform border-2 border-transparent transition duration-500 hover:border-2 hover:border-blue-500;
 }
 
 /* GLOBAL */
