@@ -15,6 +15,7 @@ export default function PortifolioCard({ reverse }) {
       programmingLanguages: "Next.js | Tailwind | Wordpress CMS",
       href: "https://crofloor.vercel.app/",
       src: "/images/portifolio/crofloor.png",
+      inProgress: true,
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ export default function PortifolioCard({ reverse }) {
       programmingLanguages: "Wordpress CMS | Divi | JS",
       href: "https://bdf-logistics.hr/",
       src: "/images/portifolio/bdf-logistics.png",
+      inProgress: false,
     },
   ];
 
@@ -101,7 +103,7 @@ export default function PortifolioCard({ reverse }) {
     <>
       {portifolio &&
         portifolio.map(
-          ({ id, name, desc, programmingLanguages, href, src }) => {
+          ({ id, name, desc, programmingLanguages, href, src, inProgress }) => {
             return (
               <div
                 key={id}
@@ -131,6 +133,13 @@ export default function PortifolioCard({ reverse }) {
                     ) : (
                       <div className="flex h-full w-full items-center justify-center rounded-lg bg-lightSecondaryGray shadow-xl dark:bg-secondaryGray">
                         <Loading size="xl" />
+                      </div>
+                    )}
+                    {inProgress && (
+                      <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                        <p className="text-3xl font-semibold">
+                          Working on it ...🛠️👷
+                        </p>
                       </div>
                     )}
                   </motion.div>

@@ -13,6 +13,7 @@ export default function ButtonDefault({
   loading,
   form,
   type,
+  ...props
 }) {
   const visitLink = () => {
     window.location.href = `${href}`;
@@ -29,11 +30,12 @@ export default function ButtonDefault({
               ease: "easeInOut",
             },
           }}
-          className={`btn__default ${style}`}
+          className={`btn__default ${style} disabled:bg-gray-700`}
           onClick={visitLink}
           aria-label={ariaLabel}
           form={form}
           type={type}
+          {...props}
         >
           {text}
         </motion.button>
