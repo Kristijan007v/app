@@ -39,7 +39,7 @@ export default function HeroHeader() {
           >
             Tailwind CSS
           </a>{" "}
-          and just loves to programm stuff 😊. Typecript is a must have.
+          and just loves to programm stuff 😊. Typecript is a life saver. 😅
         </p>
       </div>
       <ButtonDefault
