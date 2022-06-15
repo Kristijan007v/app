@@ -9,7 +9,7 @@ export default function HeroHeader() {
         <div className="avatar">
           <div className="relative w-24 rounded-full ring ring-blue-600 ring-offset-2 ring-offset-base-100">
             <Image
-              src="/images/my_photo.webp"
+              src="/images/my_picture.jpg"
               alt="My profile photo"
               layout="fill"
               objectFit="cover"

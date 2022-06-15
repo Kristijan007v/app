@@ -57,7 +57,7 @@ export default function About() {
                 className={`mask mask-squircle ${
                   imageVisible ? "grayscale-0" : "grayscale"
                 } hover:grayscale-0`}
-                src={"/images/my_photo.webp"}
+                src={"/images/my_picture.jpg"}
                 layout="fill"
                 objectFit="cover"
                 alt={"My Photo"}
