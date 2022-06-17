@@ -29,10 +29,10 @@ export default function Projects() {
     {
       id: 3,
       year: "2022",
-      name: "KV Blog",
+      name: "DevClub",
       desc: "My personal blog for posting usefull tips and tricks for web development and also tech news. The goal was to make nice looking, responsive and fast website for the best user experience.",
       programmingLanguages: "Next.js | Tailwind CSS | Sanity CMS",
-      href: "https://devclub.vercel.app/",
+      href: "https://devclub.blog/",
       github: true,
       githubLink: "https://github.com/kristijan007v",
     },
