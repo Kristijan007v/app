@@ -23,7 +23,12 @@ export default function Card({
           {linkicon && <LinkIcon href={href} />}
         </div>
       </div>
-      <h3 className="heading__special__3">{title}</h3>
+      <div className="">
+        <h3 className="heading__special__3">{title}</h3>
+        {/* <div className="fixed top-0 bottom-0 right-0 left-0 hidden items-center justify-center bg-black/50 backdrop-blur-sm group-hover:flex">
+          <LinkIcon href={href} />
+        </div> */}
+      </div>
       <ReadMore maxLength={150}>{desc}</ReadMore>
 
       <div className="flex space-x-3">

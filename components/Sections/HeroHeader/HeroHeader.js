@@ -46,7 +46,7 @@ export default function HeroHeader() {
       <ButtonDefault
         text={"Check out my blog"}
         link
-        href={"https://devclub.vercel.app"}
+        href={"https://devclub.blog"}
       />
     </div>
   );

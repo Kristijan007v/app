@@ -117,7 +117,7 @@ export default function PortifolioCard({ reverse }) {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="relative h-96 w-full flex-grow overflow-hidden rounded-xl"
+                    className="group relative h-96 w-full flex-grow overflow-hidden rounded-xl"
                   >
                     {loaded ? (
                       <Image
@@ -142,6 +142,64 @@ export default function PortifolioCard({ reverse }) {
                         </p>
                       </div>
                     )}
+                    <div className="overlay hidden group-hover:block">
+                      <p className="mt-10 text-center text-4xl">
+                        Project Gallery
+                      </p>
+                      <div className="m-auto mt-10 grid w-5/6 grid-cols-1 gap-4 lg:grid-cols-3">
+                        <motion.div
+                          variants={zoom}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          className="group relative h-96 w-full flex-grow overflow-hidden rounded-xl"
+                        >
+                          <Image
+                            priority
+                            className={`hidden rounded-xl`}
+                            src={src}
+                            layout="fill"
+                            objectFit="cover"
+                            alt={"My Photo"}
+                          />
+                          {/* <div className="absolute top-0 right-0 bottom-0 left-0 hidden bg-black/60 group-hover:block">
+                            <p className="text-center text-4xl">O nama</p>
+                          </div> */}
+                        </motion.div>
+                        <motion.div
+                          variants={zoom}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          className="group relative h-96 w-full flex-grow overflow-hidden rounded-xl"
+                        >
+                          <Image
+                            priority
+                            className={`hidden rounded-xl`}
+                            src={src}
+                            layout="fill"
+                            objectFit="cover"
+                            alt={"My Photo"}
+                          />
+                        </motion.div>
+                        <motion.div
+                          variants={zoom}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          className="group relative h-96 w-full flex-grow overflow-hidden rounded-xl"
+                        >
+                          <Image
+                            priority
+                            className={`hidden rounded-xl`}
+                            src={src}
+                            layout="fill"
+                            objectFit="cover"
+                            alt={"My Photo"}
+                          />
+                        </motion.div>
+                      </div>
+                    </div>
                   </motion.div>
                 </VisibilitySensor>
                 <div
