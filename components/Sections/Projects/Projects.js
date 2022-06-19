@@ -34,7 +34,7 @@ export default function Projects() {
       programmingLanguages: "Next.js | Tailwind CSS | Sanity CMS",
       href: "https://devclub.blog/",
       github: true,
-      githubLink: "https://github.com/kristijan007v",
+      githubLink: "https://github.com/Kristijan007v/devclub",
     },
     {
       id: 4,
